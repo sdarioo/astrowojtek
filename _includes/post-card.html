@@ -1,0 +1,16 @@
+{%- assign p = include.post -%}
+{%- capture folder -%}{% include folder-zdjec.html post=p %}{%- endcapture -%}
+<article class="karta">
+  <a class="karta-link" href="{{ p.url | relative_url }}">
+    {%- if p.okladka %}
+    <img class="karta-okladka" src="{{ folder }}{{ p.okladka }}" alt="" loading="lazy">
+    {%- else %}
+    <div class="karta-okladka karta-okladka--brak" aria-hidden="true">🔭</div>
+    {%- endif %}
+    <div class="karta-tresc">
+      <h2>{{ p.title }}</h2>
+      <p class="data">{% include data-pl.html data=p.date %}</p>
+      <p class="zajawka">{{ p.opis | default: p.excerpt | strip_html | truncatewords: 30 }}</p>
+    </div>
+  </a>
+</article>

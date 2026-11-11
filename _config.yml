@@ -1,0 +1,63 @@
+# ============================================================
+#  Ustawienia bloga AstroWojtek
+#  Po zmianie tego pliku GitHub sam przebuduje stronę (ok. 1-2 min).
+# ============================================================
+
+title: AstroWojtek
+description: Blog o gwiazdach, planetach i nocnym niebie.
+lang: pl
+author:
+  name: Wojtek
+  # Krótki opis widoczny w menu bocznym
+  bio: Młody astronom amator. Obserwuję niebo i piszę o tym, co zobaczę.
+
+# Adres strony: https://sdarioo.github.io/astrowojtek/
+url: https://sdarioo.github.io
+baseurl: /astrowojtek
+
+# Adresy artykułów, np. /astrowojtek/2026/11/pierwsza-obserwacja/
+permalink: /:year/:month/:title/
+
+# Ile artykułów na jednej stronie listy
+paginate: 6
+paginate_path: /strona/:num/
+
+timezone: Europe/Warsaw
+markdown: kramdown
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# ------------------------------------------------------------
+#  Komentarze pod artykułami
+#  provider: "" (wyłączone), "disqus" albo "htmlcommentbox"
+#  disqus_shortname: nazwa nadana przez Disqus (np. "astrowojtek").
+#  Dopóki jest pusta, komentarze się nie wyświetlają.
+#  Instrukcja: GITHUB_PAGES_SETUP.md, sekcja "Komentarze"
+# ------------------------------------------------------------
+comments:
+  provider: "disqus"
+  disqus_shortname: ""
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - GITHUB_PAGES_SETUP.md
+  - JAK-DODAC-ARTYKUL.md
+  - dodaj-artykul.ps1
+  - szablon-artykulu/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

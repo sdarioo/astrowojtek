@@ -1,0 +1,14 @@
+---
+title: Szukaj
+permalink: /szukaj/
+---
+<form class="szukaj-form szukaj-form--duzy" action="{{ '/szukaj/' | relative_url }}" method="get" role="search">
+  <input type="search" id="szukaj-pole" name="q" placeholder="Wpisz słowo, np. Księżyc" aria-label="Szukaj na blogu">
+  <button type="submit">Szukaj</button>
+</form>
+
+<p id="szukaj-info" class="szukaj-info"></p>
+<ul id="szukaj-wyniki" class="szukaj-wyniki"></ul>
+
+<noscript>Wyszukiwarka wymaga włączonego JavaScriptu.</noscript>
+<script src="{{ '/assets/js/search.js' | relative_url }}" data-index="{{ '/search.json' | relative_url }}" defer></script>

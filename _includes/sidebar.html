@@ -1,0 +1,44 @@
+<aside class="sidebar">
+  <section class="widget">
+    <h3>O autorze</h3>
+    <p>{{ site.author.bio }}</p>
+    <p><a href="{{ '/o-mnie/' | relative_url }}">Więcej o mnie →</a></p>
+  </section>
+
+  <section class="widget">
+    <h3>Szukaj</h3>
+    <form class="szukaj-form" action="{{ '/szukaj/' | relative_url }}" method="get" role="search">
+      <input type="search" name="q" placeholder="Czego szukasz?" aria-label="Szukaj na blogu" required>
+      <button type="submit">Szukaj</button>
+    </form>
+  </section>
+
+  <section class="widget">
+    <h3>Kalendarz</h3>
+    <div id="kalendarz" class="kalendarz" data-index="{{ '/search.json' | relative_url }}">
+      <noscript>Kalendarz wymaga włączonego JavaScriptu.</noscript>
+    </div>
+  </section>
+
+  <section class="widget">
+    <h3>Archiwum</h3>
+    {%- assign miesiace = "styczeń,luty,marzec,kwiecień,maj,czerwiec,lipiec,sierpień,wrzesień,październik,listopad,grudzień" | split: "," -%}
+    {%- assign grupy = site.posts | group_by_exp: "p", "p.date | date: '%Y-%m'" %}
+    <ul class="archiwum">
+      {%- for g in grupy %}
+      {%- assign pierwszy = g.items | first -%}
+      {%- assign m = pierwszy.date | date: "%-m" | minus: 1 %}
+      <li>
+        <details>
+          <summary>{{ miesiace[m] }} {{ pierwszy.date | date: "%Y" }} ({{ g.size }})</summary>
+          <ul>
+            {%- for p in g.items %}
+            <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+            {%- endfor %}
+          </ul>
+        </details>
+      </li>
+      {%- endfor %}
+    </ul>
+  </section>
+</aside>

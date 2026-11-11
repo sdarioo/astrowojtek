@@ -1,0 +1,38 @@
+{%- comment -%}
+  Komentarze pod artykułem. Serwis wybiera się w _config.yml (comments.provider).
+  Żeby zmienić serwis, wystarczy podmienić zawartość tego pliku.
+{%- endcomment -%}
+{%- assign provider = site.comments.provider -%}
+{%- if provider == "disqus" and site.comments.disqus_shortname == "" -%}
+  {%- assign provider = "" -%}
+{%- endif -%}
+{%- if provider and provider != "" %}
+<section class="komentarze" id="komentarze">
+  <h2>Komentarze</h2>
+
+  {%- if provider == "disqus" %}
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = "{{ page.url | absolute_url }}";
+      this.page.identifier = "{{ page.id }}";
+      this.page.title = {{ page.title | jsonify }};
+      this.language = "pl";
+    };
+    (function () {
+      var s = document.createElement("script");
+      s.src = "https://{{ site.comments.disqus_shortname }}.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (document.head || document.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Komentarze wymagają włączonego JavaScriptu.</noscript>
+
+  {%- elsif provider == "htmlcommentbox" %}
+  {%- comment -%}
+    Tu wklej kod wygenerowany na htmlcommentbox.com (zamiast linii poniżej).
+  {%- endcomment -%}
+  {% include htmlcommentbox.html %}
+  {%- endif %}
+</section>
+{%- endif %}

@@ -1,55 +1,100 @@
-# Publishing AstroWojtek on GitHub Pages
+# Publikacja bloga AstroWojtek na GitHub Pages
 
-The site is plain static HTML/CSS (`index.html`, `style.css`) served from the
-root of the `main` branch. The empty `.nojekyll` file tells GitHub to serve the
-files as-is, without running Jekyll.
+Blog jest zbudowany na **Jekyllu**, czyli silniku stron wbudowanym w GitHub Pages.
+GitHub sam zamienia pliki Markdown z artykułami na stronę po każdym `git push`.
+Nie trzeba niczego instalować na komputerze.
 
-## 1. Push the files to GitHub
+Adres bloga: **https://sdarioo.github.io/astrowojtek/**
+
+## 1. Wypchnij pliki na GitHuba
 
 ```bash
 git add .
-git commit -m "Add first test page"
+git commit -m "Szablon bloga"
 git push -u origin main
 ```
 
-## 2. Make sure the repository is public
+## 2. Ustaw repozytorium jako publiczne
 
-GitHub Pages is free only for **public** repositories (private repos need a paid plan).
+GitHub Pages jest darmowy tylko dla repozytoriów publicznych.
 
-- Open https://github.com/sdarioo/astrowojtek → **Settings** → **General**
-- Scroll down to **Danger Zone** → **Change repository visibility** → **Public**
-  (skip this if it is already public)
+**Settings → General → Danger Zone → Change repository visibility → Public**
 
-## 3. Turn on GitHub Pages
+## 3. Włącz GitHub Pages
 
-- In the repository go to **Settings** → **Pages** (left sidebar, under "Code and automation")
-- **Build and deployment**
-  - **Source:** `Deploy from a branch`
-  - **Branch:** `main`, folder `/ (root)` → click **Save**
+**Settings → Pages → Build and deployment**
 
-## 4. Wait for the deployment
+- **Source:** `Deploy from a branch`
+- **Branch:** `main`, folder `/ (root)` → **Save**
 
-- Go to the **Actions** tab — a workflow called *pages build and deployment* runs.
-  It usually takes 1–2 minutes.
-- When it finishes, **Settings → Pages** shows: *"Your site is live at …"*
+Jeśli Pages było już włączone dla strony testowej, nic nie trzeba zmieniać.
+Jekyll uruchomi się sam, bo usunęliśmy plik `.nojekyll`.
 
-The blog will be available at:
+## 4. Sprawdź wdrożenie
 
-**https://sdarioo.github.io/astrowojtek/**
+W zakładce **Actions** pojawi się zadanie *pages build and deployment* (1–2 minuty).
 
-## 5. Optional extras
+- Zielony znaczek: strona działa.
+- Czerwony znaczek: kliknij w zadanie, a log pokaże, który plik ma błąd. Najczęściej to literówka w nagłówku artykułu.
 
-- **Enforce HTTPS:** in **Settings → Pages**, tick *Enforce HTTPS* (normally on by default).
-- **Show the link on the repo page:** on the repo main page click the ⚙️ next to
-  **About** and tick *Use your GitHub Pages website*.
-- **Custom domain** (e.g. `astrowojtek.pl`): buy the domain, enter it in
-  **Settings → Pages → Custom domain**, and at your domain registrar add DNS records:
-  - `A` records for the apex domain pointing to
-    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-  - or a `CNAME` record for `www` pointing to `sdarioo.github.io`
+## 5. Komentarze
 
-## Updating the blog later
+GitHub Pages hostuje tylko statyczne pliki, więc komentarze muszą obsługiwać zewnętrzny serwis.
+Szablon ma przygotowane miejsce na komentarze w `_includes/comments.html`.
+Serwis wybiera się w `_config.yml`:
 
-Every push to `main` re-deploys the site automatically — edit files, commit, push,
-and the changes appear within a minute or two (hard-refresh the browser with
-Ctrl+F5 if you still see the old version).
+```yaml
+comments:
+  provider: ""          # "" = wyłączone, "disqus" albo "htmlcommentbox"
+  disqus_shortname: ""
+```
+
+> Wybrany serwis: **Disqus** (`provider: "disqus"` jest już ustawiony).
+> Komentarze pojawią się pod artykułami, gdy wpiszesz `disqus_shortname` (krok 5 poniżej).
+> Cusdis odpadł: serwer cusdis.com nie odpowiada, a projekt został zarchiwizowany.
+
+### Opcja A: Disqus (komentarze jako gość) – wybrana
+
+1. Załóż konto na https://disqus.com → **I want to install Disqus on my site**.
+2. Podaj nazwę strony. Disqus nada jej *shortname*, np. `astrowojtek`.
+3. W **Settings → Community → Guest Commenting** włącz komentowanie bez logowania.
+4. W **Settings → Community → Moderation** wybierz **Premoderate all comments**, żeby każdy komentarz czekał na akceptację.
+5. W `_config.yml` ustaw `provider: "disqus"` i `disqus_shortname: "astrowojtek"`.
+
+Darmowy plan Disqusa może wyświetlać reklamy.
+
+### Opcja B: HTML Comment Box
+
+1. Wejdź na https://www.htmlcommentbox.com, zaloguj się jako moderator i wygeneruj kod.
+2. Wklej ten kod do `_includes/htmlcommentbox.html` (zastąp obecną zawartość).
+3. W `_config.yml` ustaw `provider: "htmlcommentbox"`.
+
+## 6. Dodatki (opcjonalne)
+
+- **Link do strony na GitHubie:** na stronie repozytorium kliknij ⚙️ przy **About** i zaznacz *Use your GitHub Pages website*.
+- **Własna domena** (np. `astrowojtek.pl`):
+  1. Wpisz ją w **Settings → Pages → Custom domain**.
+  2. U rejestratora domeny dodaj rekordy `A` na adresy `185.199.108.153`, `185.199.109.153`, `185.199.110.153` i `185.199.111.153`.
+  3. W `_config.yml` zmień `url` na `https://astrowojtek.pl` i `baseurl` na `""`.
+- **Podgląd na własnym komputerze** (przed pushem):
+  - z Dockerem:
+    ```bash
+    docker run --rm -it -p 4000:4000 -v "${PWD}:/srv/jekyll" jekyll/jekyll:3.8 jekyll serve --watch --force_polling
+    ```
+  - z Ruby: `bundle install`, potem `bundle exec jekyll serve`
+
+  Strona będzie pod adresem http://localhost:4000/astrowojtek/
+
+## Struktura projektu
+
+| Ścieżka | Zawartość |
+|---|---|
+| `_posts/` | Artykuły (Markdown) |
+| `assets/images/posts/<artykuł>/` | Zdjęcia artykułów |
+| `o-mnie.md` | Strona „O mnie” |
+| `_config.yml` | Tytuł, opis autora, komentarze |
+| `_layouts/`, `_includes/` | Szablon HTML |
+| `assets/css/style.css` | Wygląd (kolory w sekcji `:root`) |
+| `assets/js/` | Kalendarz i wyszukiwarka |
+| `szablon-artykulu/` | Wzór artykułu dla Wojtka |
+| `JAK-DODAC-ARTYKUL.md` | Instrukcja dodawania artykułów |

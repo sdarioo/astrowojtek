@@ -1,0 +1,7 @@
+{%- comment -%}
+  Data po polsku, np. "11 listopada 2026".
+  Użycie: {% include data-pl.html data=page.date %}
+{%- endcomment -%}
+{%- assign miesiace = "stycznia,lutego,marca,kwietnia,maja,czerwca,lipca,sierpnia,września,października,listopada,grudnia" | split: "," -%}
+{%- assign m = include.data | date: "%-m" | minus: 1 -%}
+{{- include.data | date: "%-d" }} {{ miesiace[m] }} {{ include.data | date: "%Y" -}}

@@ -1,0 +1,7 @@
+{%- comment -%}
+  Zwraca adres folderu ze zdjęciami artykułu:
+  _posts/2026-11-15-ksiezyc.md  ->  /astrowojtek/assets/images/posts/2026-11-15-ksiezyc/
+  Użycie: {% include folder-zdjec.html post=page %}
+{%- endcomment -%}
+{%- assign nazwa = include.post.path | split: "/" | last | split: "." | first -%}
+{{- "/assets/images/posts/" | append: nazwa | append: "/" | relative_url -}}

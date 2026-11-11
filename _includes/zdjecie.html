@@ -1,0 +1,11 @@
+{%- comment -%}
+  Zdjęcie w treści artykułu. Wystarczy podać nazwę pliku z folderu artykułu.
+  Użycie: {% include zdjecie.html plik="krater.jpg" podpis="Krater Kopernik" %}
+{%- endcomment -%}
+{%- capture folder -%}{% include folder-zdjec.html post=page %}{%- endcapture -%}
+<figure class="zdjecie">
+  <a href="{{ folder }}{{ include.plik }}"><img src="{{ folder }}{{ include.plik }}" alt="{{ include.podpis | default: page.title | escape }}" loading="lazy"></a>
+  {%- if include.podpis %}
+  <figcaption>{{ include.podpis }}</figcaption>
+  {%- endif %}
+</figure>
