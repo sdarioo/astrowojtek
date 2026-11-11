@@ -35,7 +35,7 @@
       var klasa = (posty ? "kal-wpis " : "") + (jestDzis ? "kal-dzis" : "");
       var komorka = posty
         ? '<a href="' + posty[0].url + '" title="' + posty.map(function (p) { return p.title; }).join(", ").replace(/"/g, "&quot;") + '">' + d + "</a>"
-        : d;
+        : "<span>" + d + "</span>";
       html += '<td class="' + klasa.trim() + '">' + komorka + "</td>";
       if ((przesuniecie + d) % 7 === 0 && d < dniWMiesiacu) html += "</tr><tr>";
     }

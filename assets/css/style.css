@@ -255,18 +255,24 @@ blockquote {
   font-variant-numeric: tabular-nums;
 }
 .kalendarz th { color: var(--tekst-slaby); font-weight: 500; padding: 4px 0; }
-.kalendarz td { padding: 3px 0; }
-.kal-wpis a {
+.kalendarz td { padding: 2px 0; }
+.kalendarz td span,
+.kalendarz td a {
   display: inline-block;
-  min-width: 26px;
+  width: 26px;
+  height: 26px;
   line-height: 26px;
   border-radius: 50%;
+}
+.kal-wpis a {
   background: var(--akcent);
   color: var(--akcent-tekst);
   font-weight: 700;
   text-decoration: none;
 }
-.kal-dzis { outline: 1px solid var(--tekst-slaby); border-radius: 50%; }
+.kal-dzis span,
+.kal-dzis a { box-shadow: 0 0 0 1px var(--tekst-slaby); }
+.kal-dzis.kal-wpis a { box-shadow: 0 0 0 2px var(--tlo-karty), 0 0 0 3px var(--akcent); }
 
 /* Archiwum */
 .archiwum, .archiwum ul { list-style: none; margin: 0; padding: 0; }
