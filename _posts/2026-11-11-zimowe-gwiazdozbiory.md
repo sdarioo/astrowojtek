@@ -2,7 +2,7 @@
 title: "Zimowe niebo pełne gwiazd! Jakie gwiazdozbiory zobaczymy?"
 okladka: mapa-zimowego-nieba.jpg
 okladka_w_artykule: false
-date: 2026-11-11 20:30:00 +0100
+date: 2026-11-11 20:15:00 +0100
 ---
 
 Zimą noce są długie, dlatego to świetny czas na obserwowanie gwiazd. Na niebie pojawia się wiele pięknych i łatwo rozpoznawalnych gwiazdozbiorów. Niektóre z nich można zobaczyć nawet bez teleskopu!
