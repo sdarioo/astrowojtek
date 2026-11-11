@@ -9,7 +9,12 @@ layout: default
   </header>
 
   {%- if page.okladka %}
-  <img class="artykul-okladka" src="{{ folder }}{{ page.okladka }}" alt="{{ page.title | escape }}">
+  <figure class="artykul-okladka">
+    <img src="{{ folder }}{{ page.okladka }}" alt="{{ page.title | escape }}">
+    {%- if page.okladka_podpis %}
+    <figcaption>{{ page.okladka_podpis }}</figcaption>
+    {%- endif %}
+  </figure>
   {%- endif %}
 
   <div class="artykul-tresc">

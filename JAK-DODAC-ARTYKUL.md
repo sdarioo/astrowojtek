@@ -40,6 +40,7 @@ Tekst **pogrubiony**, *pochylony*, a tu [link](https://www.nasa.gov).
 | Linie `---` | Początek i koniec nagłówka. Muszą zostać. |
 | `title:` | Tytuł artykułu, w cudzysłowie. |
 | `okladka:` | Nazwa pliku ze zdjęciem tytułowym. Bez tej linii pokaże się ikonka 🔭. |
+| `okladka_podpis:` | Opcjonalny. Podpis pod zdjęciem tytułowym, np. autor i licencja zdjęcia z internetu. |
 | `opis:` | Opcjonalny. Własna zapowiedź na stronie głównej, gdy pierwszy akapit się nie nadaje. |
 | `## Tekst` | Śródtytuł. |
 | `- coś` | Punkt na liście. |

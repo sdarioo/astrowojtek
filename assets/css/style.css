@@ -154,20 +154,27 @@ h1, h2, h3 {
 .artykul h1, .strona h1 { margin: 0 0 4px; font-size: 2.2rem; color: var(--tytul); }
 .strona h1 { margin-bottom: 16px; }
 .artykul h2, .strona h2 { color: var(--tytul); margin-top: 1.8em; }
-.artykul-okladka {
-  width: 100%;
-  margin: 24px 0;
+.artykul-okladka { margin: 24px 0; }
+.artykul-okladka img {
+  width: auto;
+  max-width: 100%;
+  max-height: 560px;  /* pionowe zdjęcia nie zajmują całego ekranu */
+  margin: 0 auto;
   border-radius: var(--promien);
 }
-.artykul-tresc, .strona { font-size: 1.06rem; max-width: 72ch; }
-.zdjecie { margin: 28px 0; }
-.zdjecie img { border-radius: var(--promien); margin: 0 auto; }
+.artykul-okladka figcaption,
 .zdjecie figcaption {
   text-align: center;
   color: var(--tekst-slaby);
   font-size: 0.88rem;
   margin-top: 6px;
 }
+.artykul-okladka figcaption a,
+.zdjecie figcaption a { color: inherit; }
+hr { border: 0; border-top: 1px solid var(--ramka); margin: 32px 0 16px; }
+.artykul-tresc, .strona { font-size: 1.06rem; max-width: 72ch; }
+.zdjecie { margin: 28px 0; }
+.zdjecie img { border-radius: var(--promien); margin: 0 auto; }
 blockquote {
   margin: 20px 0;
   padding: 4px 18px;
