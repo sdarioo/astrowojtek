@@ -1,33 +1,62 @@
 /* ============================================================
-   AstroWojtek – podstawowy styl (szczegółowy wygląd: później)
-   Kolory zmienia się w jednym miejscu – w sekcji :root
+   AstroWojtek – motyw "Obserwatorium"
+   Ciemny granat nocnego nieba + bursztynowy akcent.
+   Kolory i czcionki zmienia się w jednym miejscu – w sekcji :root
    ============================================================ */
 
 :root {
-  --tlo: #0b1020;
-  --tlo-karty: #151c33;
-  --ramka: #26304f;
-  --tekst: #e6e9f5;
-  --tekst-slaby: #8f9bc0;
-  --akcent: #ffd27a;
-  --link: #8ab4ff;
-  --szerokosc: 1100px;
-  --promien: 10px;
+  --tlo: #0c1124;          /* tło strony */
+  --tlo-naglowka: #0a0e1e; /* pasek u góry */
+  --tlo-karty: #141b36;    /* karty i widżety */
+  --ramka: #232c52;
+  --tekst: #dfe4f5;
+  --tekst-slaby: #8b95bb;
+  --akcent: #f3b54a;       /* bursztyn */
+  --akcent-tekst: #1c1405; /* tekst na bursztynowym tle */
+  --tytul: #f6d28f;        /* tytuły artykułów i widżetów */
+  --link: #f3c46e;
+
+  --font-naglowki: "Exo 2", "Segoe UI", system-ui, sans-serif;
+  --font-tekst: "Inter", "Segoe UI", system-ui, sans-serif;
+
+  --szerokosc: 1140px;
+  --promien: 12px;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-tekst);
   line-height: 1.65;
   color: var(--tekst);
-  background: var(--tlo);
+  background-color: var(--tlo);
+  /* gwiazdy w tle + delikatna poświata u góry */
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, #ffffffaa, transparent 60%),
+    radial-gradient(1px 1px at 72% 8%, #ffffff88, transparent 60%),
+    radial-gradient(1.4px 1.4px at 88% 42%, #ffffffaa, transparent 60%),
+    radial-gradient(1px 1px at 34% 64%, #ffffff66, transparent 60%),
+    radial-gradient(1px 1px at 55% 90%, #ffffff77, transparent 60%),
+    radial-gradient(1px 1px at 6% 78%, #ffffff77, transparent 60%),
+    radial-gradient(1.2px 1.2px at 45% 30%, #ffffff66, transparent 60%),
+    radial-gradient(ellipse at 80% -10%, #1f2a5a 0%, transparent 55%);
+  background-attachment: fixed;
 }
 
-a { color: var(--link); }
+a { color: var(--link); text-underline-offset: 2px; }
+a:hover { color: var(--akcent); }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--akcent);
+  outline-offset: 2px;
+}
 img { max-width: 100%; height: auto; display: block; }
-h1, h2, h3 { line-height: 1.25; }
+h1, h2, h3 {
+  font-family: var(--font-naglowki);
+  line-height: 1.2;
+  text-wrap: balance;
+}
 
 .kontener {
   max-width: var(--szerokosc);
@@ -37,8 +66,8 @@ h1, h2, h3 { line-height: 1.25; }
 
 /* --- Nagłówek i menu --- */
 .naglowek {
+  background: var(--tlo-naglowka);
   border-bottom: 1px solid var(--ramka);
-  background: #0e1530;
 }
 .naglowek-wnetrze {
   display: flex;
@@ -50,14 +79,20 @@ h1, h2, h3 { line-height: 1.25; }
   padding-bottom: 16px;
 }
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-naglowki);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--tekst);
+  font-weight: 800;
+  color: var(--akcent);
   text-decoration: none;
 }
-.menu { display: flex; gap: 20px; }
-.menu a { color: var(--tekst); text-decoration: none; }
-.menu a:hover { color: var(--akcent); }
+.logo svg { width: 32px; height: 32px; flex: none; }
+.menu { display: flex; gap: 22px; }
+.menu a { color: var(--tekst); text-decoration: none; opacity: .85; }
+.menu a:hover, .menu a.aktywny { color: var(--akcent); opacity: 1; }
+.menu a.aktywny { font-weight: 600; }
 
 /* --- Układ: treść + pasek boczny --- */
 .uklad {
@@ -71,13 +106,13 @@ h1, h2, h3 { line-height: 1.25; }
   .uklad { grid-template-columns: minmax(0, 1fr); }
 }
 
-.data { color: var(--tekst-slaby); font-size: 0.9rem; margin: 0; }
+.data { color: var(--tekst-slaby); font-size: 0.88rem; margin: 0; }
 
 /* --- Lista artykułów (karty) --- */
-.tytul-listy { margin-top: 0; }
+.tytul-listy { margin-top: 0; font-size: 1.8rem; }
 .karty {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 24px;
 }
 .karta {
@@ -85,10 +120,12 @@ h1, h2, h3 { line-height: 1.25; }
   border: 1px solid var(--ramka);
   border-radius: var(--promien);
   overflow: hidden;
-  transition: transform 0.15s, border-color 0.15s;
+  box-shadow: 0 10px 30px -18px #000;
+  transition: transform 0.2s, border-color 0.2s;
 }
 .karta:hover { transform: translateY(-3px); border-color: var(--akcent); }
 .karta-link { color: inherit; text-decoration: none; display: block; }
+.karta-link:hover { color: inherit; }
 .karta-okladka {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -102,7 +139,7 @@ h1, h2, h3 { line-height: 1.25; }
   font-size: 3rem;
 }
 .karta-tresc { padding: 14px 18px 18px; }
-.karta-tresc h2 { margin: 0 0 4px; font-size: 1.2rem; color: var(--akcent); }
+.karta-tresc h2 { margin: 0 0 4px; font-size: 1.2rem; color: var(--tytul); }
 .zajawka { margin: 8px 0 0; font-size: 0.95rem; }
 
 .paginacja {
@@ -113,21 +150,29 @@ h1, h2, h3 { line-height: 1.25; }
   color: var(--tekst-slaby);
 }
 
-/* --- Artykuł --- */
-.artykul h1 { margin: 0 0 4px; font-size: 2.2rem; }
+/* --- Artykuł i zwykłe strony --- */
+.artykul h1, .strona h1 { margin: 0 0 4px; font-size: 2.2rem; color: var(--tytul); }
+.strona h1 { margin-bottom: 16px; }
+.artykul h2, .strona h2 { color: var(--tytul); margin-top: 1.8em; }
 .artykul-okladka {
   width: 100%;
   margin: 24px 0;
   border-radius: var(--promien);
 }
-.artykul-tresc { font-size: 1.08rem; }
+.artykul-tresc, .strona { font-size: 1.06rem; max-width: 72ch; }
 .zdjecie { margin: 28px 0; }
 .zdjecie img { border-radius: var(--promien); margin: 0 auto; }
 .zdjecie figcaption {
   text-align: center;
   color: var(--tekst-slaby);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   margin-top: 6px;
+}
+blockquote {
+  margin: 20px 0;
+  padding: 4px 18px;
+  border-left: 3px solid var(--akcent);
+  color: var(--tekst-slaby);
 }
 .poprzedni-nastepny {
   display: flex;
@@ -144,17 +189,18 @@ h1, h2, h3 { line-height: 1.25; }
   padding-top: 16px;
   border-top: 1px solid var(--ramka);
 }
+.komentarze h2 { color: var(--tytul); }
 
 /* --- Pasek boczny --- */
-.sidebar { display: flex; flex-direction: column; gap: 24px; }
+.sidebar { display: flex; flex-direction: column; gap: 20px; }
 .widget {
   background: var(--tlo-karty);
   border: 1px solid var(--ramka);
   border-radius: var(--promien);
   padding: 16px 18px;
 }
-.widget h3 { margin: 0 0 10px; font-size: 1rem; color: var(--akcent); }
-.widget p { margin: 0 0 8px; font-size: 0.95rem; }
+.widget h3 { margin: 0 0 10px; font-size: 1rem; color: var(--tytul); }
+.widget p { margin: 0 0 8px; font-size: 0.93rem; }
 
 .szukaj-form { display: flex; gap: 6px; }
 .szukaj-form input {
@@ -172,7 +218,7 @@ h1, h2, h3 { line-height: 1.25; }
   border-radius: 6px;
   border: 0;
   background: var(--akcent);
-  color: #1a1a1a;
+  color: var(--akcent-tekst);
   font: inherit;
   font-weight: 600;
   cursor: pointer;
@@ -200,19 +246,27 @@ h1, h2, h3 { line-height: 1.25; }
   cursor: pointer;
   padding: 0 8px;
 }
-.kalendarz table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.85rem; }
+.kal-naglowek button:hover { color: var(--akcent); }
+.kalendarz table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
 .kalendarz th { color: var(--tekst-slaby); font-weight: 500; padding: 4px 0; }
-.kalendarz td { padding: 4px 0; }
+.kalendarz td { padding: 3px 0; }
 .kal-wpis a {
   display: inline-block;
   min-width: 26px;
+  line-height: 26px;
   border-radius: 50%;
   background: var(--akcent);
-  color: #1a1a1a;
+  color: var(--akcent-tekst);
   font-weight: 700;
   text-decoration: none;
 }
-.kal-dzis { outline: 1px solid var(--tekst-slaby); border-radius: 4px; }
+.kal-dzis { outline: 1px solid var(--tekst-slaby); border-radius: 50%; }
 
 /* Archiwum */
 .archiwum, .archiwum ul { list-style: none; margin: 0; padding: 0; }
@@ -221,9 +275,15 @@ h1, h2, h3 { line-height: 1.25; }
 
 /* --- Stopka --- */
 .stopka {
+  background: var(--tlo-naglowka);
   border-top: 1px solid var(--ramka);
   padding: 20px 0;
   text-align: center;
   color: var(--tekst-slaby);
   font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .karta { transition: none; }
+  .karta:hover { transform: none; }
 }
