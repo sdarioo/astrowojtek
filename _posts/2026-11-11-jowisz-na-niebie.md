@@ -1,6 +1,7 @@
 ---
 title: "Jowisz coraz bliżej! Kiedy zobaczę go przez teleskop?"
 okladka: okladka.jpg
+okladka_w_artykule: false
 date: 2026-11-11 20:00:00 +0100
 ---
 

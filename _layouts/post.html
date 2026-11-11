@@ -8,7 +8,7 @@ layout: default
     <p class="data">{% include data-pl.html data=page.date %}</p>
   </header>
 
-  {%- if page.okladka %}
+  {%- if page.okladka and page.okladka_w_artykule != false %}
   <figure class="artykul-okladka">
     <img src="{{ folder }}{{ page.okladka }}" alt="{{ page.title | escape }}">
     {%- if page.okladka_podpis %}
