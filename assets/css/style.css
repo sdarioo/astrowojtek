@@ -174,7 +174,23 @@ h1, h2, h3 {
 hr { border: 0; border-top: 1px solid var(--ramka); margin: 32px 0 16px; }
 .artykul-tresc, .strona { font-size: 1.06rem; max-width: 72ch; }
 .zdjecie { margin: 28px 0; }
-.zdjecie img { border-radius: var(--promien); margin: 0 auto; }
+.zdjecie img { border-radius: var(--promien); margin: 0 auto; max-height: 560px; width: auto; }
+.artykul-tresc table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.92rem;
+}
+.artykul-tresc th,
+.artykul-tresc td {
+  padding: 8px 12px;
+  border: 1px solid var(--ramka);
+  text-align: left;
+  vertical-align: top;
+}
+.artykul-tresc th { background: var(--tlo-karty); color: var(--tytul); }
+.artykul-tresc tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.025); }
 blockquote {
   margin: 20px 0;
   padding: 4px 18px;

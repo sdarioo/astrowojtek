@@ -1,5 +1,5 @@
 ---
-title: "Sky-Watcher Startravel 120/600 kontra Sky-Watcher MAK 127 oraz Sky-Watcher Dobson 6 kontra Dobson 8"
+title: "Sky-Watcher Startravel 120/600 kontra MAK 127 oraz Dobson 6 kontra Dobson 8"
 okladka: startravel.jpg
 okladka_w_artykule: false
 opis: "Cztery popularne teleskopy Sky-Watcher w prostym porównaniu: cena, ogniskowa, światłosiła i do czego się nadają."
@@ -17,13 +17,13 @@ Wybór pierwszego teleskopu bywa trudny. Porównuję cztery popularne modele Sky
 
 ### Sky-Watcher Startravel 120/600
 
-{% include zdjecie.html plik="startravel.jpg" podpis="Krótki refraktor na prostym montażu, podobny do Startravel 120/600. Foto: Kosebamse, <a href='https://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, Wikimedia Commons" %}
+{% include zdjecie.html plik="startravel.jpg" podpis="Sky-Watcher Startravel 120" %}
 
 To refraktor (soczewka) o średnicy 120 mm i ogniskowej 600 mm. Jest lekki, szybki w użyciu i daje szerokie pole widzenia. Świetnie pokazuje Drogę Mleczną, Plejady, wielką mgławicę w Orionie i duże gromady gwiazd. Jego wadą jest aberracja chromatyczna, czyli kolorowa obwódka wokół jasnych obiektów, np. Jowisza. Cena: ok. 1400 zł za samą tubę.
 
 ### Sky-Watcher MAK 127
 
-{% include zdjecie.html plik="mak127.jpg" podpis="Teleskop Maksutowa-Cassegraina (tu 150 mm, MAK 127 wygląda bardzo podobnie). Foto: Halfblue, <a href='https://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, Wikimedia Commons" %}
+{% include zdjecie.html plik="mak127.jpg" podpis="Sky-Watcher MAK 127 (Skymax 127)" %}
 
 To teleskop Maksutowa-Cassegraina o średnicy 127 mm i ogniskowej 1500 mm. Jest krótki, zwarty i wygodny w transporcie. Dobrze pokazuje Księżyc, planety i gwiazdy podwójne, a obraz jest czysty i kontrastowy. Ma wąskie pole widzenia i potrzebuje trochę czasu na wychłodzenie po wyniesieniu na zewnątrz. Cena: ok. 1600 zł za samą tubę.
 
@@ -49,13 +49,13 @@ Dobson to teleskop Newtona na prostym, skrzynkowym montażu. Nie trzeba go ustaw
 
 ### Sky-Watcher Dobson 6 (150/1200)
 
-{% include zdjecie.html plik="dobson6.jpg" podpis="Mniejszy Dobson Sky-Watcher z aparatem na wyciągu okularowym. Foto: Jeremy.wood, <a href='https://creativecommons.org/licenses/by-sa/4.0/'>CC BY-SA 4.0</a>, Wikimedia Commons" %}
+{% include zdjecie.html plik="dobson6.jpg" podpis="Klasyczny Dobson Sky-Watcher. Na zdjęciu wersja 8-calowa, szóstka wygląda tak samo, tylko jest mniejsza." %}
 
 Jest tańszy i łatwiejszy w obsłudze. Dobrze radzi sobie z Księżycem, planetami i jaśniejszymi obiektami głębokiego nieba. Całość waży około 18 kg. Cena: ok. 1230 zł.
 
 ### Sky-Watcher Dobson 8 (200/1200)
 
-{% include zdjecie.html plik="dobson8.jpg" podpis="Dobson Sky-Watcher, tu w wersji 12-calowej. Ósemka wygląda tak samo, tylko jest mniejsza. Foto: Fotonovela, <a href='https://creativecommons.org/licenses/by-sa/3.0/'>CC BY-SA 3.0</a>, Wikimedia Commons" %}
+{% include zdjecie.html plik="dobson8.jpg" podpis="Dobson Sky-Watcher w wersji składanej (Flextube), na zdjęciu 10 cali." %}
 
 Zbiera około 1,8 raza więcej światła niż szóstka. Pokazuje więcej mgławic i galaktyk oraz więcej szczegółów na planetach. Jest za to cięższy i większy, więc trudniejszy do przenoszenia. Cena: ok. 1800 do 2100 zł.
 
