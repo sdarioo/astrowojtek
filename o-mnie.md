@@ -3,7 +3,7 @@ title: O mnie
 permalink: /o-mnie/
 ---
 
-Cześć! Mam na imię **Wojtek** i interesuję się astronomią.
+Cześć! Mam na imię **Wojtek**, mam 10 lat, chodzę do 4 klasy i interesuję się astronomią.
 
 Na tym blogu opisuję swoje obserwacje nieba: Księżyca, planet i mgławic.
 Dzielę się też ciekawostkami o kosmosie – i nie tylko.
