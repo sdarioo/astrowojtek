@@ -49,13 +49,13 @@ Dobson to teleskop Newtona na prostym, skrzynkowym montażu. Nie trzeba go ustaw
 
 ### Sky-Watcher Dobson 6 (150/1200)
 
-{% include zdjecie.html plik="dobson6.jpg" podpis="Klasyczny Dobson Sky-Watcher. Na zdjęciu wersja 8-calowa, szóstka wygląda tak samo, tylko jest mniejsza." %}
+{% include zdjecie.html plik="dobson6.jpg" podpis="Sky-Watcher Dobson 6 cali (150/1200)" %}
 
 Jest tańszy i łatwiejszy w obsłudze. Dobrze radzi sobie z Księżycem, planetami i jaśniejszymi obiektami głębokiego nieba. Całość waży około 18 kg. Cena: ok. 1230 zł.
 
 ### Sky-Watcher Dobson 8 (200/1200)
 
-{% include zdjecie.html plik="dobson8.jpg" podpis="Dobson Sky-Watcher w wersji składanej (Flextube), na zdjęciu 10 cali." %}
+{% include zdjecie.html plik="dobson8.jpg" podpis="Sky-Watcher Dobson 8 cali (200/1200)" %}
 
 Zbiera około 1,8 raza więcej światła niż szóstka. Pokazuje więcej mgławic i galaktyk oraz więcej szczegółów na planetach. Jest za to cięższy i większy, więc trudniejszy do przenoszenia. Cena: ok. 1800 do 2100 zł.
 
