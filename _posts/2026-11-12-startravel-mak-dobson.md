@@ -80,6 +80,6 @@ Oba mają tę samą ogniskową 1200 mm, więc z tym samym okularem dają takie s
 - Mało miejsca i częste wyjazdy: Startravel lub MAK 127.
 - Księżyc i planety w małym pakiecie: MAK 127.
 - Szerokie pola i Droga Mleczna: Startravel.
-- Najwięcej widoku za złotówkę: Dobson, a jeśli masz miejsce i siłę do noszenia, to ósemka.
+- Najwięcej zobaczysz za najmniejsze pieniądze: Dobson. Jeśli masz na niego miejsce i siłę, żeby go nosić, wybierz ósemkę.
 
 *Ceny są orientacyjne, na podstawie ofert polskich sklepów. Przed zakupem sprawdź aktualne.*
