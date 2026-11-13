@@ -11,11 +11,11 @@ author:
   # Krótki opis widoczny w menu bocznym
   bio: Młody astronom amator. Obserwuję niebo i piszę o tym, co zobaczę.
 
-# Adres strony: https://sdarioo.github.io/astrowojtek/
-url: https://sdarioo.github.io
-baseurl: /astrowojtek
+# Adres strony: https://astrowojtek.pl/
+url: https://astrowojtek.pl
+baseurl: ""
 
-# Adresy artykułów, np. /astrowojtek/2026/11/pierwsza-obserwacja/
+# Adresy artykułów, np. /2026/11/pierwsza-obserwacja/
 permalink: /:year/:month/:title/
 
 # Ile artykułów na jednej stronie listy

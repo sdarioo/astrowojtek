@@ -4,7 +4,7 @@ Blog jest zbudowany na **Jekyllu**, czyli silniku stron wbudowanym w GitHub Page
 GitHub sam zamienia pliki Markdown z artykułami na stronę po każdym `git push`.
 Nie trzeba niczego instalować na komputerze.
 
-Adres bloga: **https://sdarioo.github.io/astrowojtek/**
+Adres bloga: **https://astrowojtek.pl/** (wcześniej https://sdarioo.github.io/astrowojtek/ – stary adres przekierowuje na nowy)
 
 ## 1. Wypchnij pliki na GitHuba
 
@@ -74,8 +74,11 @@ Darmowy plan Disqusa może wyświetlać reklamy.
 - **Link do strony na GitHubie:** na stronie repozytorium kliknij ⚙️ przy **About** i zaznacz *Use your GitHub Pages website*.
 - **Własna domena** (np. `astrowojtek.pl`):
   1. Wpisz ją w **Settings → Pages → Custom domain**.
-  2. U rejestratora domeny dodaj rekordy `A` na adresy `185.199.108.153`, `185.199.109.153`, `185.199.110.153` i `185.199.111.153`.
+  2. U rejestratora domeny dodaj rekordy `A` na adresy `185.199.108.153`, `185.199.109.153`, `185.199.110.153` i `185.199.111.153` oraz rekord `CNAME` dla `www` wskazujący na `sdarioo.github.io.` (z kropką na końcu).
   3. W `_config.yml` zmień `url` na `https://astrowojtek.pl` i `baseurl` na `""`.
+  4. Gdy GitHub wystawi certyfikat, zaznacz **Enforce HTTPS** (certyfikat jest darmowy, nie trzeba go kupować).
+
+  Tak jest skonfigurowany ten blog (domena `astrowojtek.pl` w home.pl).
 - **Podgląd na własnym komputerze** (przed pushem):
   - z Dockerem:
     ```bash
@@ -83,7 +86,7 @@ Darmowy plan Disqusa może wyświetlać reklamy.
     ```
   - z Ruby: `bundle install`, potem `bundle exec jekyll serve`
 
-  Strona będzie pod adresem http://localhost:4000/astrowojtek/
+  Strona będzie pod adresem http://localhost:4000/
 
 ## Struktura projektu
 
