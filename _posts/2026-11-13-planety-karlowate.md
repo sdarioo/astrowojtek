@@ -14,43 +14,43 @@ Quaoar i Sedna są bardzo ciekawymi obiektami, które bywają rozważane jako ka
 
 ## 1. Ceres
 
-{% include zdjecie.html plik="ceres.jpg" podpis="Autorska ilustracja cyfrowa Ceres. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="ceres.jpg" podpis="Wizja artystyczna Ceres. Nie jest fotografią obiektu." %}
 
 Ceres znajduje się w pasie planetoid pomiędzy Marsem a Jowiszem. Jest najmniejszą z pięciu oficjalnie uznanych planet karłowatych i jedyną z nich w wewnętrznej części Układu Słonecznego. Na jej powierzchni znajduje się wiele kraterów. W 2015 roku dotarła do niej sonda kosmiczna Dawn.
 
 ## 2. Pluton
 
-{% include zdjecie.html plik="pluton.jpg" podpis="Autorska ilustracja cyfrowa Plutona. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="pluton.jpg" podpis="Pluton sfotografowany przez sondę New Horizons w 2015 roku. Zdjęcie: NASA/JHUAPL/SwRI" %}
 
 Pluton znajduje się w Pasie Kuipera, za orbitą Neptuna. Przez wiele lat był uznawany za dziewiątą planetę Układu Słonecznego. W 2006 roku zmieniono jego klasyfikację na planetę karłowatą. Ma pięć znanych księżyców. Największy z nich nazywa się Charon.
 
 ## 3. Haumea
 
-{% include zdjecie.html plik="haumea.jpg" podpis="Autorska ilustracja cyfrowa Haumei. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="haumea.jpg" podpis="Wizja artystyczna Haumei. Nie jest fotografią obiektu." %}
 
 Haumea znajduje się w Pasie Kuipera. Obraca się wokół własnej osi bardzo szybko, dlatego ma wydłużony kształt przypominający jajko. Ma dwa znane księżyce, a wokół niej odkryto także pierścień.
 
 ## 4. Quaoar
 
-{% include zdjecie.html plik="quaoar.jpg" podpis="Autorska ilustracja cyfrowa Quaoara. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="quaoar.jpg" podpis="Wizja artystyczna Quaoara. Nie jest fotografią obiektu." %}
 
 Quaoar to duży obiekt transneptunowy znajdujący się w Pasie Kuipera. Ma księżyc o nazwie Weywot. Wokół Quaoara odkryto również pierścień. Nie jest jednak oficjalnie uznaną planetą karłowatą.
 
 ## 5. Makemake
 
-{% include zdjecie.html plik="makemake.jpg" podpis="Autorska ilustracja cyfrowa Makemake. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="makemake.jpg" podpis="Wizja artystyczna Makemake. Nie jest fotografią obiektu." %}
 
 Makemake znajduje się w Pasie Kuipera. Została odkryta w 2005 roku i jest jedną z najjaśniejszych znanych planetoid w tej odległej części Układu Słonecznego. Jej powierzchnia jest bardzo zimna i pokryta lodami. Makemake ma jeden znany księżyc.
 
 ## 6. Eris
 
-{% include zdjecie.html plik="eris.jpg" podpis="Autorska ilustracja cyfrowa Eris. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="eris.jpg" podpis="Wizja artystyczna Eris. Nie jest fotografią obiektu." %}
 
 Eris znajduje się daleko za Neptunem, w obszarze nazywanym dyskiem rozproszonym. Jest jedną z największych planet karłowatych. Jej odkrycie w 2005 roku przyczyniło się do dyskusji o tym, czym właściwie jest planeta. Eris ma jeden znany księżyc o nazwie Dysnomia.
 
 ## 7. Sedna
 
-{% include zdjecie.html plik="sedna.jpg" podpis="Autorska ilustracja cyfrowa Sedny. Nie jest fotografią obiektu." %}
+{% include zdjecie.html plik="sedna.jpg" podpis="Wizja artystyczna Sedny. Nie jest fotografią obiektu." %}
 
 Sedna znajduje się bardzo daleko od Słońca, poza głównym obszarem Pasa Kuipera. Jej orbita jest niezwykle wydłużona. Jeden obieg wokół Słońca zajmuje jej około 11 tysięcy lat. Sedna ma czerwonawy kolor i jest obiektem odłączonym od typowych orbit Pasa Kuipera. Nie została oficjalnie uznana za planetę karłowatą.
 
