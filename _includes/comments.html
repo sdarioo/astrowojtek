@@ -1,12 +1,18 @@
 {%- comment -%}
-  Komentarze pod artykułem. Serwis wybiera się w _config.yml (comments.provider).
+  Komentarze pod artykułem. Serwis wybiera się w _config.yml (comments.provider):
+  "astrowojtek" (własny serwis), "disqus", "htmlcommentbox" albo "" (wyłączone).
   Żeby zmienić serwis, wystarczy podmienić zawartość tego pliku.
 {%- endcomment -%}
 {%- assign provider = site.comments.provider -%}
 {%- if provider == "disqus" and site.comments.disqus_shortname == "" -%}
   {%- assign provider = "" -%}
 {%- endif -%}
-{%- if provider and provider != "" %}
+{%- if provider == "astrowojtek" and site.comments.api_url == "" -%}
+  {%- assign provider = "" -%}
+{%- endif -%}
+{%- if provider == "astrowojtek" -%}
+  {%- if page.komentarze != false %}{% include komentarze-astrowojtek.html %}{% endif -%}
+{%- elsif provider and provider != "" %}
 <section class="komentarze" id="komentarze">
   <h2>Komentarze</h2>
 

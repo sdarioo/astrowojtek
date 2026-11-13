@@ -31,14 +31,21 @@ plugins:
   - jekyll-seo-tag
 
 # ------------------------------------------------------------
-#  Komentarze pod artykułami
-#  provider: "" (wyłączone), "disqus" albo "htmlcommentbox"
-#  disqus_shortname: nazwa nadana przez Disqus (np. "astrowojtek").
-#  Dopóki jest pusta, komentarze się nie wyświetlają.
-#  Instrukcja: GITHUB_PAGES_SETUP.md, sekcja "Komentarze"
+#  Komentarze i polubienia pod artykułami
+#  provider: "" (wyłączone), "astrowojtek" (własny serwis), "disqus"
+#  albo "htmlcommentbox".
+#  api_url: adres serwisu komentarzy (bez "/" na końcu). Dopóki jest pusty,
+#  komentarze się nie wyświetlają.
+#  turnstile_sitekey: klucz Cloudflare Turnstile (pusty = bez captchy).
+#  Komentarze pod jednym artykułem wyłączysz, dopisując w nagłówku
+#  artykułu: komentarze: false
+#  Instrukcja: GITHUB_PAGES_SETUP.md, sekcja "Komentarze".
+#  Wymagania serwisu: SERWIS-KOMENTARZY-WYMAGANIA.md
 # ------------------------------------------------------------
 comments:
-  provider: "disqus"
+  provider: "astrowojtek"
+  api_url: "https://civil-comments.fly.dev"
+  turnstile_sitekey: ""
   disqus_shortname: ""
 
 defaults:
@@ -56,6 +63,7 @@ exclude:
   - README.md
   - GITHUB_PAGES_SETUP.md
   - JAK-DODAC-ARTYKUL.md
+  - SERWIS-KOMENTARZY-WYMAGANIA.md
   - dodaj-artykul.ps1
   - szablon-artykulu/
   - Gemfile

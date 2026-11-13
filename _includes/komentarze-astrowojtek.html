@@ -1,0 +1,56 @@
+{%- comment -%}
+  Własny system komentarzy i polubień AstroWojtka.
+  Logika: assets/js/komentarze.js, style: assets/css/komentarze.css.
+  Backend: patrz SERWIS-KOMENTARZY-WYMAGANIA.md.
+  Slug artykułu: /2026/11/tytul/ → 2026-11-tytul
+{%- endcomment -%}
+{%- assign slug = page.url | remove_first: "/" | split: "/" | join: "-" -%}
+<link rel="stylesheet" href="{{ '/assets/css/komentarze.css' | relative_url }}">
+
+<section class="komentarze aw-komentarze" id="komentarze"
+         data-api="{{ site.comments.api_url }}"
+         data-slug="{{ slug }}">
+
+  <div class="aw-polub">
+    <button type="button" class="aw-serce aw-serce-duze" data-aw-like-post aria-pressed="false" disabled>
+      <span class="aw-ikona" aria-hidden="true">♥</span>
+      <span>Lubię to</span>
+      <span class="aw-licznik" data-aw-post-likes>0</span>
+    </button>
+  </div>
+
+  <h2>Komentarze <span class="aw-ile" data-aw-count></span></h2>
+
+  <p class="aw-info" data-aw-load-status>Wczytuję komentarze…</p>
+  <ol class="aw-lista" data-aw-list></ol>
+
+  <form class="aw-form" data-aw-form hidden novalidate>
+    <h3>Dodaj komentarz</h3>
+    <label for="aw-autor">Twoje imię lub nick</label>
+    <input id="aw-autor" name="author" type="text" maxlength="40" required autocomplete="nickname">
+
+    <label for="aw-tresc">Komentarz</label>
+    <textarea id="aw-tresc" name="text" rows="4" maxlength="2000" required></textarea>
+    <p class="aw-znaki"><span data-aw-chars>0</span> / 2000</p>
+
+    {%- comment -%} Pułapka na boty: ludzie tego pola nie widzą. {%- endcomment -%}
+    <div class="aw-pulapka" aria-hidden="true">
+      <label for="aw-www">Nie wypełniaj tego pola</label>
+      <input id="aw-www" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    {%- if site.comments.turnstile_sitekey and site.comments.turnstile_sitekey != "" %}
+    <div class="cf-turnstile" data-sitekey="{{ site.comments.turnstile_sitekey }}" data-language="pl" data-theme="dark"></div>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    {%- endif %}
+
+    <p class="aw-regulamin">Komentarze są automatycznie sprawdzane. Obraźliwe, wulgarne i reklamowe wpisy nie zostaną opublikowane. Nie podawaj swoich danych (adresu, telefonu, e-maila).</p>
+    <button type="submit" class="aw-wyslij">Wyślij</button>
+    <p class="aw-status" data-aw-status role="status" aria-live="polite"></p>
+  </form>
+
+  <p class="aw-info" data-aw-closed hidden>Pod tym artykułem osiągnięto limit komentarzy.</p>
+
+  <noscript><p class="aw-info">Komentarze i polubienia wymagają włączonego JavaScriptu.</p></noscript>
+</section>
+<script src="{{ '/assets/js/komentarze.js' | relative_url }}" defer></script>

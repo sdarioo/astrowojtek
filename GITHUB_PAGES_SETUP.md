@@ -45,15 +45,26 @@ Serwis wybiera się w `_config.yml`:
 
 ```yaml
 comments:
-  provider: ""          # "" = wyłączone, "disqus" albo "htmlcommentbox"
+  provider: "astrowojtek"   # "" = wyłączone, "astrowojtek", "disqus" albo "htmlcommentbox"
+  api_url: ""               # adres własnego serwisu, np. https://astrowojtek-komentarze.fly.dev
+  turnstile_sitekey: ""     # opcjonalnie: klucz Cloudflare Turnstile
   disqus_shortname: ""
 ```
 
-> Wybrany serwis: **Disqus** (`provider: "disqus"` jest już ustawiony).
-> Komentarze pojawią się pod artykułami, gdy wpiszesz `disqus_shortname` (krok 5 poniżej).
-> Cusdis odpadł: serwer cusdis.com nie odpowiada, a projekt został zarchiwizowany.
+> Wybrany serwis: **własny serwis komentarzy** (`provider: "astrowojtek"`).
+> Komentarze i polubienia pojawią się pod artykułami, gdy wpiszesz `api_url`.
 
-### Opcja A: Disqus (komentarze jako gość) – wybrana
+### Własny serwis komentarzy (wybrany)
+
+Komentarze anonimowe (wystarczy nick), automatyczna moderacja AI, polubienia artykułów i komentarzy.
+
+- Pliki po stronie bloga: `_includes/komentarze-astrowojtek.html` (wygląd), `assets/js/komentarze.js` (logika), `assets/css/komentarze.css` (style).
+- Wymagania i API serwisu: `SERWIS-KOMENTARZY-WYMAGANIA.md`.
+- Włączenie: uruchom serwis na fly.io, wpisz jego adres w `api_url` i ustaw w serwisie `ALLOWED_ORIGIN=https://astrowojtek.pl`.
+- Captcha (opcjonalnie): załóż widżet na https://dash.cloudflare.com → **Turnstile** dla domeny `astrowojtek.pl`. *Site key* wpisz w `turnstile_sitekey`, a *Secret key* jako sekret serwisu `TURNSTILE_SECRET`.
+- Wyłączenie komentarzy pod jednym artykułem: w nagłówku artykułu dopisz `komentarze: false`.
+
+### Opcja A: Disqus (komentarze jako gość)
 
 1. Załóż konto na https://disqus.com → **I want to install Disqus on my site**.
 2. Podaj nazwę strony. Disqus nada jej *shortname*, np. `astrowojtek`.

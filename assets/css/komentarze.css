@@ -1,0 +1,120 @@
+/* ============================================================
+   Komentarze i polubienia AstroWojtka
+   Korzysta ze zmiennych kolorów z style.css (sekcja :root).
+   ============================================================ */
+
+.aw-polub { margin-bottom: 8px; }
+
+.aw-serce {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--ramka);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--tekst-slaby);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+}
+.aw-serce:hover:not(:disabled) { color: var(--akcent); border-color: var(--akcent); }
+.aw-serce:disabled { cursor: default; opacity: 0.6; }
+.aw-serce .aw-ikona { font-size: 1.05em; line-height: 1; }
+.aw-serce.aw-aktywne { color: #ff6b81; border-color: #ff6b81; }
+.aw-serce.aw-aktywne .aw-ikona { animation: aw-bicie 0.3s ease-out; }
+.aw-serce-duze { padding: 8px 16px; font-size: 1rem; font-weight: 600; }
+
+@keyframes aw-bicie {
+  50% { transform: scale(1.35); }
+}
+
+.aw-ile { color: var(--tekst-slaby); font-size: 0.8em; font-weight: 600; }
+.aw-info { color: var(--tekst-slaby); }
+
+.aw-lista {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.aw-komentarz {
+  background: var(--tlo-karty);
+  border: 1px solid var(--ramka);
+  border-radius: var(--promien);
+  padding: 12px 16px;
+}
+.aw-naglowek {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+}
+.aw-autor { color: var(--tytul); overflow-wrap: anywhere; }
+.aw-data { color: var(--tekst-slaby); font-size: 0.85rem; }
+.aw-tresc {
+  margin: 6px 0 10px;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.aw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--tlo-karty);
+  border: 1px solid var(--ramka);
+  border-radius: var(--promien);
+  padding: 16px 18px;
+}
+.aw-form h3 { margin: 0 0 6px; color: var(--tytul); }
+.aw-form label { font-size: 0.9rem; color: var(--tekst-slaby); }
+.aw-form input,
+.aw-form textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--ramka);
+  background: var(--tlo);
+  color: var(--tekst);
+  font: inherit;
+}
+.aw-form textarea { resize: vertical; min-height: 96px; }
+.aw-form input:focus-visible,
+.aw-form textarea:focus-visible { outline: 2px solid var(--akcent); outline-offset: 1px; }
+.aw-znaki { margin: 0; text-align: right; font-size: 0.8rem; color: var(--tekst-slaby); }
+.aw-regulamin { margin: 4px 0; font-size: 0.8rem; color: var(--tekst-slaby); }
+
+.aw-wyslij {
+  align-self: flex-start;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--akcent);
+  color: var(--akcent-tekst);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.aw-wyslij:disabled { opacity: 0.6; cursor: wait; }
+
+/* Pułapka na boty – niewidoczna dla ludzi */
+.aw-pulapka {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.aw-status { margin: 4px 0 0; min-height: 1.5em; font-size: 0.93rem; }
+.aw-status-info { color: var(--tekst-slaby); }
+.aw-status-ok { color: #7bd88f; }
+.aw-status-blad { color: #ff8a8a; }
+
+@media (prefers-reduced-motion: reduce) {
+  .aw-serce, .aw-serce.aw-aktywne .aw-ikona { transition: none; animation: none; }
+}
