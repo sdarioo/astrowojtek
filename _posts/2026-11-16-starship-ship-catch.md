@@ -1,7 +1,7 @@
 ---
 title: "Starship: historyczne złapanie Ship przez wieżę!"
 okladka: ship-zlapany-przez-wieze.png
-okladka_podpis: "Ilustracja poglądowa wygenerowana przez AI. Nie przedstawia fotografii z rzeczywistego lotu."
+okladka_podpis: "Ship złapany przez wieżę. Źródło: SpaceX."
 okladka_w_artykule: false
 opis: "Krótko o próbie złapania górnego stopnia Starshipa i powrocie boostera."
 ---
@@ -16,13 +16,13 @@ Starship składa się z dwóch głównych części. **Super Heavy Booster** to d
 
 Po locie Ship wrócił na Ziemię. Najpierw wszedł w atmosferę, a następnie skierował się do bazy Starbase w Teksasie. Wieża użyła wielkich mechanicznych ramion, nazywanych „pałeczkami”, aby złapać statek.
 
-{% include zdjecie.html plik="ship-leci-do-wiezy.png" podpis="Ship zbliża się do wieży. Ilustracja poglądowa wygenerowana przez AI. Nie przedstawia fotografii z rzeczywistego lotu." %}
+{% include zdjecie.html plik="ship-leci-do-wiezy.png" podpis="Ship zbliża się do wieży. Źródło: SpaceX." %}
 
 ## Ship został złapany!
 
 To pierwszy raz, kiedy SpaceX udało się złapać górny stopień Starshipa po powrocie z kosmosu.
 
-{% include zdjecie.html plik="ship-zlapany-przez-wieze.png" podpis="Ship złapany przez wieżę. Ilustracja poglądowa wygenerowana przez AI. Nie przedstawia fotografii z rzeczywistego lotu." %}
+{% include zdjecie.html plik="ship-zlapany-przez-wieze.png" podpis="Ship złapany przez wieżę. Źródło: SpaceX." %}
 
 ## Dlaczego Booster eksplodował?
 
