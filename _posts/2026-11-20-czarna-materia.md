@@ -14,13 +14,13 @@ Czarna materia to niewidzialna materia, która nie świeci i nie odbija światł
 
 Czarna materia pomaga wyjaśnić, dlaczego galaktyki obracają się w taki sposób, w jaki się obracają. Jej grawitacja wpływa na ruch gwiazd i pomaga utrzymywać duże struktury kosmiczne.
 
-{% include zdjecie.html plik="02_galaktyka_halo.png" podpis="Galaktyka otoczona halo ciemnej materii. Ilustracja schematyczna." %}
+{% include zdjecie.html plik="halo-ciemnej-materii.svg" podpis="Gwiazdy na krańcach galaktyk krążą za szybko. Tę dodatkową grawitację daje niewidzialne halo ciemnej materii. Schemat." %}
 
 ## Czy naukowcy ją odkryli?
 
 Naukowcy nadal badają czarną materię. Nie wiedzą dokładnie, z czego się składa, ale prowadzą eksperymenty i obserwacje kosmosu, aby poznać jej tajemnice.
 
-{% include zdjecie.html plik="03_soczewkowanie_grawitacyjne.png" podpis="Soczewkowanie grawitacyjne: masywna struktura zakrzywia tor światła. Schemat." %}
+{% include zdjecie.html plik="soczewkowanie-grawitacyjne.svg" podpis="Ciemna materia zakrzywia światło odległych galaktyk. Dzięki temu można ją wykryć, choć jej nie widać. Schemat." %}
 
 ## Ciekawostka!
 
