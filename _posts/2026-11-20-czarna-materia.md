@@ -1,7 +1,7 @@
 ---
 title: "Czarna materia w kosmosie!"
-okladka: 01_kosmiczna_siec.png
-okladka_podpis: "Kosmiczna sieć galaktyk. Ilustracja schematyczna, a nie zdjęcie z teleskopu."
+okladka: okladka.png
+okladka_podpis: "Ciemna materia w kosmosie. Grafika wygenerowana przez AI."
 ---
 
 Czarna materia, nazywana również ciemną materią, jest jedną z największych tajemnic kosmosu. Naukowcy uważają, że stanowi dużą część materii we Wszechświecie, ale do dziś nie udało się jej bezpośrednio zaobserwować.
@@ -34,4 +34,4 @@ Czarna materia jest niewidzialną i tajemniczą częścią Wszechświata. Chocia
 
 - [NASA – Dark Matter](https://science.nasa.gov/universe/dark-matter-dark-energy/)
 
-*Ilustracje w artykule są schematycznymi grafikami edukacyjnymi, a nie fotografiami z teleskopu.*
+*Grafika tytułowa została wygenerowana przez AI. Ilustracje w tekście są schematycznymi grafikami edukacyjnymi, a nie fotografiami z teleskopu.*
