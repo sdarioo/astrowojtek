@@ -20,16 +20,19 @@
       </a>
       <nav class="menu">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url contains '/strona/' or page.layout == 'post' %} class="aktywny"{% endif %}>Strona główna</a>
+        <a href="{{ '/uklad-sloneczny/' | relative_url }}"{% if page.url == '/uklad-sloneczny/' %} class="aktywny"{% endif %}>Układ Słoneczny</a>
         <a href="{{ '/o-mnie/' | relative_url }}"{% if page.url == '/o-mnie/' %} class="aktywny"{% endif %}>O mnie</a>
       </nav>
     </div>
   </header>
 
-  <div class="kontener uklad">
+  <div class="kontener uklad{% if page.pelna_szerokosc %} uklad--pelny{% endif %}">
     <main class="tresc">
       {{ content }}
     </main>
+    {%- unless page.pelna_szerokosc %}
     {% include sidebar.html %}
+    {%- endunless %}
   </div>
 
   <footer class="stopka">

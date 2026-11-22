@@ -1,0 +1,37 @@
+---
+title: Układ Słoneczny
+permalink: /uklad-sloneczny/
+description: Mapa Układu Słonecznego z góry – planety w miejscach, w których są teraz naprawdę.
+pelna_szerokosc: true
+---
+<div class="us">
+  <p class="us-wstep">
+    Tak wygląda Układ Słoneczny widziany z góry – <strong>w tej chwili</strong>.
+    Położenie planet jest obliczane na żywo w Twojej przeglądarce.
+    <strong>Kliknij planetę</strong>, żeby zobaczyć informacje o niej.
+  </p>
+
+  <div class="us-uklad">
+    <div class="us-mapa">
+      <svg id="us-svg" viewBox="-500 -500 1000 1000" role="group" aria-label="Mapa Układu Słonecznego"></svg>
+      <noscript><p class="us-noscript">Mapa wymaga włączonego JavaScriptu.</p></noscript>
+    </div>
+
+    <aside id="us-panel" class="us-panel" aria-live="polite">
+      <p class="us-panel-pusty">Kliknij Słońce, planetę albo Księżyc, a tutaj pojawią się informacje.</p>
+    </aside>
+  </div>
+
+  <p class="us-info">
+    <span id="us-czas">Obliczam położenie planet…</span><br>
+    Kierunki do planet są prawdziwe, ale odległości są „ściśnięte”, a planety powiększone –
+    w prawdziwej skali Merkury, Wenus, Ziemia i Mars zlałyby się ze Słońcem, a planet nie dałoby się zobaczyć.
+    Planety krążą przeciwnie do ruchu wskazówek zegara.
+    Strzałka ♈ przy prawej krawędzi pokazuje kierunek do <em>punktu Barana</em> – od niego astronomowie liczą kierunki (w stopniach).
+    <br>Zdjęcia: NASA · Obliczenia: <a href="https://github.com/cosinekitty/astronomy">Astronomy Engine</a>
+  </p>
+</div>
+
+<script id="us-dane" type="application/json">{{ site.data.planety | jsonify }}</script>
+<script src="{{ '/assets/js/lib/astronomy.browser.min.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/uklad-sloneczny.js' | relative_url }}" data-obrazy="{{ '/assets/images/uklad-sloneczny/' | relative_url }}" defer></script>

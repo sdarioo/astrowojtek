@@ -89,7 +89,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 .logo svg { width: 32px; height: 32px; flex: none; }
-.menu { display: flex; gap: 22px; }
+.menu { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .menu a { color: var(--tekst); text-decoration: none; opacity: .85; }
 .menu a:hover, .menu a.aktywny { color: var(--akcent); opacity: 1; }
 .menu a.aktywny { font-weight: 600; }
@@ -310,6 +310,78 @@ blockquote {
   text-align: center;
   color: var(--tekst-slaby);
   font-size: 0.85rem;
+}
+
+/* --- Układ Słoneczny (/uklad-sloneczny/) --- */
+.uklad--pelny { grid-template-columns: minmax(0, 1fr); }
+.strona:has(.us) { max-width: none; }
+.us-wstep { max-width: 72ch; }
+.us-uklad {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+.us-mapa {
+  background: radial-gradient(circle at center, #121a3a 0%, #070a17 75%);
+  border: 1px solid var(--ramka);
+  border-radius: var(--promien);
+  overflow: hidden;
+}
+#us-svg { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.us-gwiazdy circle { fill: #fff; }
+.us-orbita { fill: none; stroke: #5b6a9e; stroke-width: 1.1; opacity: 0.55; }
+.us-orbita.wybrane { stroke: var(--akcent); stroke-width: 2; opacity: 1; }
+.us-kierunek line, .us-kierunek path { stroke: var(--tekst-slaby); fill: var(--tekst-slaby); stroke-width: 1.2; opacity: 0.85; }
+.us-kierunek text { fill: var(--tekst-slaby); font-size: 16px; font-family: "Segoe UI Symbol", "DejaVu Sans", sans-serif; }
+.us-cialo { cursor: pointer; outline: none; }
+.us-pole { fill: transparent; }
+.us-zaznaczenie { fill: none; stroke: var(--akcent); stroke-width: 2; opacity: 0; }
+.us-cialo:hover .us-zaznaczenie, .us-cialo:focus-visible .us-zaznaczenie { opacity: 0.5; }
+.us-cialo.wybrane .us-zaznaczenie { opacity: 1; }
+.us-napis {
+  fill: var(--tekst);
+  font-family: var(--font-naglowki);
+  font-size: 14px;
+  font-weight: 600;
+  paint-order: stroke;
+  stroke: #070a17;
+  stroke-width: 3px;
+}
+.us-cialo.wybrane .us-napis { fill: var(--tytul); }
+
+.us-panel {
+  background: var(--tlo-karty);
+  border: 1px solid var(--ramka);
+  border-radius: var(--promien);
+  padding: 18px;
+  font-size: 0.95rem;
+  position: sticky;
+  top: 16px;
+}
+.us-panel-pusty { color: var(--tekst-slaby); margin: 0; }
+.us-panel-naglowek { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.us-panel-naglowek img { width: 64px; height: auto; flex: none; }
+.us-panel h2 { margin: 0; color: var(--tytul); font-size: 1.5rem; }
+.us-panel-naglowek p { margin: 2px 0 0; color: var(--tekst-slaby); }
+.us-panel dl { margin: 0; }
+.us-panel dl div { padding: 7px 0; border-top: 1px solid var(--ramka); }
+.us-panel dt { color: var(--tekst-slaby); font-size: 0.82rem; }
+.us-panel dd { margin: 0; font-weight: 500; }
+.us-panel .us-zywo dd { color: var(--akcent); }
+.us-panel .us-zywo dt::after { content: " · na żywo"; color: var(--akcent); opacity: 0.8; }
+.us-ciekawostka { margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--ramka); }
+.us-info { color: var(--tekst-slaby); font-size: 0.85rem; max-width: 90ch; }
+.us-info a { color: inherit; }
+.us-noscript { padding: 16px; margin: 0; }
+
+@media (max-width: 960px) {
+  .us-uklad { grid-template-columns: minmax(0, 1fr); }
+  .us-panel { position: static; }
+}
+@media (max-width: 600px) {
+  .us-napis { font-size: 20px; stroke-width: 4px; }
+  .us-kierunek text { font-size: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

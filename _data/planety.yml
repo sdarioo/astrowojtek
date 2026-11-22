@@ -1,0 +1,181 @@
+# ============================================================
+#  Dane do strony „Układ Słoneczny” (/uklad-sloneczny/)
+#  Źródło: NASA Planetary Fact Sheet (nssdc.gsfc.nasa.gov/planetary/factsheet)
+#
+#  id        – angielska nazwa ciała (potrzebna do obliczeń, NIE ZMIENIAĆ)
+#  obraz     – plik w assets/images/uklad-sloneczny/
+#  rozmiar   – wielkość obrazka na mapie (umowna, nie w skali)
+#  okres_dni – ile dni trwa jeden obieg Słońca (do rysowania orbity)
+#  dane      – wiersze w okienku z informacjami: [opis, wartość]
+#              (możesz dopisywać nowe wiersze)
+# ============================================================
+
+- id: Sun
+  nazwa: Słońce
+  rodzaj: gwiazda
+  obraz: slonce.png
+  rozmiar: 66
+  dane:
+    - ["Średnica", "1 392 700 km (109 razy więcej niż Ziemia)"]
+    - ["Obrót wokół osi", "ok. 25 dni na równiku, ok. 35 dni przy biegunach"]
+    - ["Temperatura powierzchni", "ok. 5500 °C"]
+    - ["Temperatura w środku", "ok. 15 milionów °C"]
+    - ["Wiek", "ok. 4,6 miliarda lat"]
+  ciekawostka: "Słońce zawiera 99,8% masy całego Układu Słonecznego. Światło ze Słońca leci do Ziemi około 8 minut i 20 sekund."
+
+- id: Mercury
+  nazwa: Merkury
+  rodzaj: planeta skalista
+  obraz: merkury.png
+  rozmiar: 17
+  okres_dni: 87.969
+  dane:
+    - ["Średnia odległość od Słońca", "57,9 mln km (0,39 j.a.)"]
+    - ["Rok (obieg Słońca)", "88 dni"]
+    - ["Doba (od wschodu do wschodu Słońca)", "176 dni ziemskich"]
+    - ["Obrót wokół osi", "58,6 dnia"]
+    - ["Średnica", "4879 km"]
+    - ["Księżyce", "brak"]
+    - ["Temperatura", "od −173 °C w nocy do 427 °C w dzień"]
+  ciekawostka: "Na Merkurym doba trwa dłużej niż rok! Od jednego wschodu Słońca do następnego mijają tam aż dwa merkuriańskie lata."
+
+- id: Venus
+  nazwa: Wenus
+  rodzaj: planeta skalista
+  obraz: wenus.png
+  rozmiar: 23
+  okres_dni: 224.701
+  dane:
+    - ["Średnia odległość od Słońca", "108,2 mln km (0,72 j.a.)"]
+    - ["Rok (obieg Słońca)", "225 dni"]
+    - ["Doba (od wschodu do wschodu Słońca)", "117 dni ziemskich"]
+    - ["Obrót wokół osi", "243 dni – w przeciwną stronę niż Ziemia"]
+    - ["Średnica", "12 104 km"]
+    - ["Księżyce", "brak"]
+    - ["Temperatura", "ok. 464 °C (najgorętsza planeta)"]
+  ciekawostka: "Na Wenus Słońce wschodzi na zachodzie, a zachodzi na wschodzie, bo planeta kręci się „do tyłu”. Gęste chmury sprawiają, że jest tam goręcej niż na Merkurym."
+
+- id: Earth
+  nazwa: Ziemia
+  rodzaj: planeta skalista
+  obraz: ziemia.png
+  rozmiar: 24
+  okres_dni: 365.256
+  dane:
+    - ["Średnia odległość od Słońca", "149,6 mln km (1 j.a.)"]
+    - ["Rok (obieg Słońca)", "365,25 dnia"]
+    - ["Doba (od wschodu do wschodu Słońca)", "24 godziny"]
+    - ["Obrót wokół osi", "23 h 56 min"]
+    - ["Średnica", "12 756 km"]
+    - ["Księżyce", "1 (Księżyc)"]
+    - ["Temperatura", "średnio ok. 15 °C"]
+  ciekawostka: "Ziemia jest jedyną znaną planetą, na której jest życie i woda w stanie ciekłym na powierzchni. 1 j.a. (jednostka astronomiczna) to właśnie średnia odległość Ziemi od Słońca."
+
+- id: Moon
+  nazwa: Księżyc
+  rodzaj: naturalny satelita Ziemi
+  obraz: ksiezyc.png
+  rozmiar: 9
+  dane:
+    - ["Średnia odległość od Ziemi", "384 400 km"]
+    - ["Obieg Ziemi", "27,3 dnia"]
+    - ["Doba (od wschodu do wschodu Słońca)", "29,5 dnia (tyle trwa cykl faz)"]
+    - ["Średnica", "3475 km"]
+    - ["Temperatura", "od −173 °C w nocy do 127 °C w dzień"]
+  ciekawostka: "Księżyc jest zawsze zwrócony do Ziemi tą samą stroną. Na mapie jest narysowany dużo bliżej Ziemi niż w rzeczywistości, ale kierunek, w którym się znajduje, jest prawdziwy."
+
+- id: Mars
+  nazwa: Mars
+  rodzaj: planeta skalista
+  obraz: mars.png
+  rozmiar: 19
+  okres_dni: 686.980
+  dane:
+    - ["Średnia odległość od Słońca", "227,9 mln km (1,52 j.a.)"]
+    - ["Rok (obieg Słońca)", "687 dni (1,9 roku ziemskiego)"]
+    - ["Doba (od wschodu do wschodu Słońca)", "24 h 40 min"]
+    - ["Obrót wokół osi", "24 h 37 min"]
+    - ["Średnica", "6792 km"]
+    - ["Księżyce", "2 (Fobos i Deimos)"]
+    - ["Temperatura", "średnio ok. −65 °C"]
+  ciekawostka: "Mars jest czerwony, bo jego powierzchnię pokrywa rdzawy pył. Jest tam Olympus Mons – największy wulkan w Układzie Słonecznym, prawie 3 razy wyższy od Mount Everestu."
+
+- id: Jupiter
+  nazwa: Jowisz
+  rodzaj: gazowy olbrzym
+  obraz: jowisz.png
+  rozmiar: 44
+  okres_dni: 4332.59
+  dane:
+    - ["Średnia odległość od Słońca", "778,5 mln km (5,2 j.a.)"]
+    - ["Rok (obieg Słońca)", "11,9 roku ziemskiego"]
+    - ["Doba (od wschodu do wschodu Słońca)", "9 h 56 min"]
+    - ["Obrót wokół osi", "9 h 56 min (najszybciej ze wszystkich planet)"]
+    - ["Średnica", "142 984 km (11 razy więcej niż Ziemia)"]
+    - ["Księżyce", "97 znanych (stan na 2025 r.)"]
+    - ["Temperatura", "ok. −110 °C (w górnych chmurach)"]
+  ciekawostka: "Jowisz jest największą planetą – zmieściłoby się w nim ponad 1300 Ziem. Wielka Czerwona Plama to burza większa od całej Ziemi."
+
+- id: Saturn
+  nazwa: Saturn
+  rodzaj: gazowy olbrzym
+  obraz: saturn.png
+  rozmiar: 76
+  okres_dni: 10759.22
+  dane:
+    - ["Średnia odległość od Słońca", "1432 mln km (9,6 j.a.)"]
+    - ["Rok (obieg Słońca)", "29,4 roku ziemskiego"]
+    - ["Doba (od wschodu do wschodu Słońca)", "10 h 33 min"]
+    - ["Obrót wokół osi", "10 h 33 min"]
+    - ["Średnica", "120 536 km (bez pierścieni)"]
+    - ["Księżyce", "274 znane (stan na 2025 r.)"]
+    - ["Temperatura", "ok. −140 °C (w górnych chmurach)"]
+  ciekawostka: "Pierścienie Saturna są zbudowane z kawałków lodu i skał – od ziarenek pyłu po bryły wielkości domu. Saturn ma tak małą gęstość, że pływałby w gigantycznej wannie z wodą."
+
+- id: Uranus
+  nazwa: Uran
+  rodzaj: lodowy olbrzym
+  obraz: uran.png
+  rozmiar: 30
+  okres_dni: 30685.4
+  dane:
+    - ["Średnia odległość od Słońca", "2867 mln km (19,2 j.a.)"]
+    - ["Rok (obieg Słońca)", "84 lata ziemskie"]
+    - ["Doba (od wschodu do wschodu Słońca)", "17 h 14 min"]
+    - ["Obrót wokół osi", "17 h 14 min – w przeciwną stronę niż Ziemia"]
+    - ["Średnica", "51 118 km"]
+    - ["Księżyce", "29 znanych (stan na 2025 r.)"]
+    - ["Temperatura", "ok. −195 °C"]
+  ciekawostka: "Uran „leży na boku” – jego oś obrotu jest przechylona prawie o 98°. Dlatego na biegunach przez 42 lata trwa dzień, a potem przez 42 lata noc."
+
+- id: Neptune
+  nazwa: Neptun
+  rodzaj: lodowy olbrzym
+  obraz: neptun.png
+  rozmiar: 29
+  okres_dni: 60189.0
+  dane:
+    - ["Średnia odległość od Słońca", "4515 mln km (30,1 j.a.)"]
+    - ["Rok (obieg Słońca)", "164,8 roku ziemskiego"]
+    - ["Doba (od wschodu do wschodu Słońca)", "16 h 6 min"]
+    - ["Obrót wokół osi", "16 h 6 min"]
+    - ["Średnica", "49 528 km"]
+    - ["Księżyce", "16 znanych (stan na 2025 r.)"]
+    - ["Temperatura", "ok. −200 °C"]
+  ciekawostka: "Na Neptunie wieją najszybsze wiatry w Układzie Słonecznym – ponad 2000 km/h. Od odkrycia w 1846 roku Neptun okrążył Słońce dopiero raz (w 2011 roku)."
+
+- id: Pluto
+  nazwa: Pluton
+  rodzaj: planeta karłowata
+  obraz: pluton.png
+  rozmiar: 13
+  okres_dni: 90560.0
+  dane:
+    - ["Średnia odległość od Słońca", "5906 mln km (39,5 j.a.)"]
+    - ["Rok (obieg Słońca)", "248 lat ziemskich"]
+    - ["Doba (od wschodu do wschodu Słońca)", "6,4 dnia"]
+    - ["Obrót wokół osi", "6,4 dnia – w przeciwną stronę niż Ziemia"]
+    - ["Średnica", "2376 km (mniejszy od naszego Księżyca)"]
+    - ["Księżyce", "5 (największy to Charon)"]
+    - ["Temperatura", "ok. −225 °C"]
+  ciekawostka: "Do 2006 roku Pluton był nazywany dziewiątą planetą, teraz jest planetą karłowatą. Jego orbita jest tak wydłużona, że czasem jest bliżej Słońca niż Neptun – zobacz, jak orbity się przecinają!"
