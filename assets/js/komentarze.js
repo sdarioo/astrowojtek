@@ -1,6 +1,5 @@
 // Komentarze i polubienia AstroWojtka.
 // Rozmawia z własnym serwisem (adres w _config.yml: comments.api_url).
-// Kontrakt API: SERWIS-KOMENTARZY-WYMAGANIA.md.
 // Cała treść od użytkowników trafia na stronę przez textContent (nigdy innerHTML).
 (function () {
   "use strict";

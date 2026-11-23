@@ -61,9 +61,7 @@ defaults:
 
 exclude:
   - README.md
-  - GITHUB_PAGES_SETUP.md
   - JAK-DODAC-ARTYKUL.md
-  - SERWIS-KOMENTARZY-WYMAGANIA.md
   - dodaj-artykul.ps1
   - szablon-artykulu/
   - Gemfile
