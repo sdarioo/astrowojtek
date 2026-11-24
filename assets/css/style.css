@@ -384,6 +384,63 @@ blockquote {
   .us-kierunek text { font-size: 24px; }
 }
 
+/* --- Gra Star-Ship-Wars (/gra/) --- */
+.strona:has(.gra) { max-width: none; }
+.gra-wstep { max-width: 72ch; }
+.gra-ekran {
+  background: #03040f;
+  border: 1px solid var(--ramka);
+  border-radius: var(--promien);
+  overflow: hidden;
+}
+#gra-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  touch-action: none;
+  cursor: pointer;
+  outline: none;
+}
+#gra-canvas:focus-visible { box-shadow: inset 0 0 0 2px var(--akcent); }
+.gra-ekran:fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0;
+}
+.gra-ekran:fullscreen #gra-canvas { width: min(100vw, 100vh * 16 / 9); }
+.gra-noscript { padding: 16px; margin: 0; }
+.gra-pasek {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+.gra-sterowanie { color: var(--tekst-slaby); font-size: 0.9rem; margin: 0; }
+.gra-sterowanie kbd {
+  font-family: var(--font-tekst);
+  font-size: 0.82rem;
+  padding: 1px 6px;
+  border: 1px solid var(--ramka);
+  border-radius: 5px;
+  background: var(--tlo-karty);
+  color: var(--tekst);
+}
+.gra-przycisk {
+  font: 600 0.95rem var(--font-naglowki);
+  color: var(--akcent-tekst);
+  background: var(--akcent);
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.gra-przycisk:hover { filter: brightness(1.1); }
+
 @media (prefers-reduced-motion: reduce) {
   .karta { transition: none; }
   .karta:hover { transform: none; }

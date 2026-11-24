@@ -1,0 +1,30 @@
+---
+title: Gra Star-Ship-Wars
+permalink: /gra/
+description: Kosmiczna strzelanka w przeglądarce – przeleć przez 8 planet Układu Słonecznego i pokonaj UFO.
+pelna_szerokosc: true
+---
+<div class="gra">
+  <p class="gra-wstep">
+    Leć statkiem przez <strong>8 światów</strong> – od Merkurego do Neptuna.
+    W każdym świecie zestrzel wszystkie UFO, a potem <strong>wleć w planetę</strong>, żeby przenieść się dalej.
+    W każdym świecie masz osobne 3 życia.
+  </p>
+
+  <div class="gra-ekran" id="gra-ekran">
+    <canvas id="gra-canvas" width="1152" height="648" tabindex="0" aria-label="Gra Star-Ship-Wars – kliknij, aby zagrać"></canvas>
+    <noscript><p class="gra-noscript">Gra wymaga włączonego JavaScriptu.</p></noscript>
+  </div>
+
+  <div class="gra-pasek">
+    <p class="gra-sterowanie">
+      <kbd>W</kbd> / <kbd>S</kbd> lub <kbd>↑</kbd> / <kbd>↓</kbd> – lot ·
+      <kbd>Spacja</kbd> lub <kbd>X</kbd> – strzał ·
+      <kbd>Enter</kbd> – nowa gra.
+      Na telefonie: przytrzymaj palec na ekranie gry i przesuwaj.
+    </p>
+    <button type="button" class="gra-przycisk" id="gra-pelny-ekran" hidden>Pełny ekran</button>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/gra.js' | relative_url }}" defer></script>

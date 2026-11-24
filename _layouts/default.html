@@ -21,6 +21,7 @@
       <nav class="menu">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' or page.url contains '/strona/' or page.layout == 'post' %} class="aktywny"{% endif %}>Strona główna</a>
         <a href="{{ '/uklad-sloneczny/' | relative_url }}"{% if page.url == '/uklad-sloneczny/' %} class="aktywny"{% endif %}>Układ Słoneczny</a>
+        <a href="{{ '/gra/' | relative_url }}"{% if page.url == '/gra/' %} class="aktywny"{% endif %}>Gra</a>
         <a href="{{ '/o-mnie/' | relative_url }}"{% if page.url == '/o-mnie/' %} class="aktywny"{% endif %}>O mnie</a>
       </nav>
     </div>
