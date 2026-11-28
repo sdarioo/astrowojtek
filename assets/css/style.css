@@ -441,7 +441,199 @@ blockquote {
 }
 .gra-przycisk:hover { filter: brightness(1.1); }
 
+/* --- Quiz wiedzy o kosmosie (/quiz/) --- */
+.quiz {
+  /* kolory pucharów: jasny – średni – ciemny */
+  --zloto-1: #fff1b8; --zloto-2: #f5c542; --zloto-3: #b8860b;
+  --srebro-1: #ffffff; --srebro-2: #c9d1e3; --srebro-3: #7d879e;
+  --braz-1: #f6c9a0; --braz-2: #cd7f32; --braz-3: #8a4a1c;
+  --dobra: #4ade80;
+  --zla: #f87171;
+}
+.quiz-karta {
+  background: var(--tlo-karty);
+  border: 1px solid var(--ramka);
+  border-radius: var(--promien);
+  padding: 24px;
+  box-shadow: 0 10px 30px -18px #000;
+}
+.quiz-wstep { margin-top: 0; }
+.quiz-zasady { padding-left: 1.2em; }
+.quiz-przycisk {
+  font: 700 1.05rem var(--font-naglowki);
+  color: var(--akcent-tekst);
+  background: var(--akcent);
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+.quiz-przycisk:hover { filter: brightness(1.1); }
+
+.quiz-nagrody {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 24px;
+  text-align: center;
+}
+.quiz-nagroda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+.quiz-nagroda .quiz-puchar { width: 56px; margin-bottom: 6px; }
+.quiz-nagroda span { color: var(--tekst-slaby); }
+
+.quiz-gora {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--tekst-slaby);
+  font-size: 0.9rem;
+}
+.quiz-pasek {
+  height: 8px;
+  margin: 8px 0 20px;
+  background: var(--tlo);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.quiz-pasek-wypelnienie {
+  height: 100%;
+  background: var(--akcent);
+  border-radius: 99px;
+  transition: width 0.3s;
+}
+.strona .quiz-tresc {
+  margin: 0 0 20px;
+  font-size: 1.35rem;
+  color: var(--tekst);
+  outline: none;
+}
+.quiz-odpowiedzi { display: grid; gap: 10px; }
+.quiz-odpowiedz {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  font: 500 1rem var(--font-tekst);
+  color: var(--tekst);
+  background: var(--tlo);
+  border: 2px solid var(--ramka);
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.quiz-odpowiedz:hover:not(:disabled) { border-color: var(--akcent); }
+.quiz-odpowiedz:disabled { cursor: default; opacity: 0.6; }
+.quiz-litera {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--ramka);
+  font: 700 0.9rem var(--font-naglowki);
+}
+.quiz-odpowiedz--dobra:disabled,
+.quiz-odpowiedz--zla:disabled { opacity: 1; }
+.quiz-odpowiedz--dobra { border-color: var(--dobra); background: color-mix(in srgb, var(--dobra) 14%, var(--tlo)); }
+.quiz-odpowiedz--dobra .quiz-litera { background: var(--dobra); color: #052e16; }
+.quiz-odpowiedz--zla { border-color: var(--zla); background: color-mix(in srgb, var(--zla) 14%, var(--tlo)); }
+.quiz-odpowiedz--zla .quiz-litera { background: var(--zla); color: #450a0a; }
+
+.quiz-informacja:empty { display: none; }
+.quiz-informacja {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border-left: 4px solid var(--ramka);
+  background: var(--tlo);
+}
+.quiz-informacja--dobra { border-left-color: var(--dobra); }
+.quiz-informacja--zla { border-left-color: var(--zla); }
+.quiz-informacja p { margin: 6px 0 14px; color: var(--tekst-slaby); }
+.quiz-informacja strong { display: block; }
+
+.strona .quiz-wynik-liczba { margin: 0 0 16px; text-align: center; outline: none; }
+.quiz-wynik-nagroda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.quiz-wynik-nagroda .quiz-puchar {
+  width: 130px;
+  flex: none;
+  filter: drop-shadow(0 0 22px var(--poswiata, transparent));
+  animation: quiz-wyskok 0.6s ease-out;
+}
+.quiz-wynik-nagroda--zloty { --poswiata: #f5c54266; --kolor-tytulu: var(--zloto-2); }
+.quiz-wynik-nagroda--srebrny { --poswiata: #c9d1e355; --kolor-tytulu: var(--srebro-2); }
+.quiz-wynik-nagroda--brazowy { --poswiata: #cd7f3255; --kolor-tytulu: var(--braz-2); }
+.quiz-wynik-opis { max-width: 32ch; }
+.quiz-wynik-opis p { margin: 6px 0 0; color: var(--tekst-slaby); }
+.quiz-wynik-puchar {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--tekst-slaby);
+}
+.quiz-wynik-tytul {
+  display: block;
+  font: 800 1.8rem/1.15 var(--font-naglowki);
+  color: var(--kolor-tytulu, var(--tytul));
+}
+.quiz-wynik > .quiz-przycisk { display: block; margin: 0 auto; }
+
+.quiz-puchar { height: auto; display: block; overflow: visible; }
+.quiz-puchar--zloty { --p1: var(--zloto-1); --p2: var(--zloto-2); --p3: var(--zloto-3); }
+.quiz-puchar--srebrny { --p1: var(--srebro-1); --p2: var(--srebro-2); --p3: var(--srebro-3); }
+.quiz-puchar--brazowy { --p1: var(--braz-1); --p2: var(--braz-2); --p3: var(--braz-3); }
+.quiz-puchar-korpus { stroke: var(--p3); stroke-width: 2; stroke-linejoin: round; }
+.quiz-gwiazdka { fill: var(--tlo); stroke: var(--tekst-slaby); stroke-width: 3; stroke-linejoin: round; }
+.quiz-puchar .s1 { stop-color: var(--p1); }
+.quiz-puchar .s2 { stop-color: var(--p2); }
+.quiz-puchar .s3 { stop-color: var(--p3); }
+.quiz-puchar-gwiazda { fill: var(--p1); stroke: var(--p3); stroke-width: 1.5; stroke-linejoin: round; }
+.quiz-puchar-blysk { stroke: #ffffff; opacity: 0.45; }
+
+@keyframes quiz-wyskok {
+  0% { transform: scale(0.4) rotate(-12deg); opacity: 0; }
+  70% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); }
+}
+
+.quiz-bledy { margin-top: 28px; border-top: 1px solid var(--ramka); padding-top: 4px; }
+.strona .quiz-bledy h3 { margin: 16px 0 8px; color: var(--tytul); font-size: 1.15rem; }
+.quiz-bledy ol { padding-left: 1.3em; margin: 0; }
+.quiz-bledy li { margin-bottom: 12px; }
+.quiz-blad-pytanie { display: block; font-weight: 500; }
+.quiz-blad-odp { display: block; font-size: 0.95rem; }
+.quiz-blad-odp s { color: var(--zla); }
+.quiz-blad-odp strong { color: var(--dobra); }
+.quiz-blad-link { font-size: 0.88rem; }
+.quiz-bezbledu { text-align: center; margin: 20px 0 0; }
+
+@media (max-width: 600px) {
+  .quiz-karta { padding: 18px 16px; }
+  .strona .quiz-tresc { font-size: 1.2rem; }
+  .quiz-wynik-nagroda { flex-direction: column; text-align: center; gap: 12px; }
+  .quiz-nagroda strong { font-size: 0.8rem; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .karta { transition: none; }
   .karta:hover { transform: none; }
+  .quiz-wynik-nagroda .quiz-puchar { animation: none; }
+  .quiz-pasek-wypelnienie, .quiz-odpowiedz { transition: none; }
 }

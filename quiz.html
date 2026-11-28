@@ -1,0 +1,11 @@
+---
+title: Quiz wiedzy o kosmosie
+permalink: /quiz/
+description: Sprawdź, ile wiesz o planetach, gwiazdach i kosmosie. 15 pytań, 3 odpowiedzi do wyboru i puchar na koniec!
+---
+<div class="quiz" id="quiz">
+  <noscript><p>Quiz wymaga włączonego JavaScriptu.</p></noscript>
+</div>
+
+<script id="quiz-dane" type="application/json">{{ site.data.quiz | jsonify }}</script>
+<script src="{{ '/assets/js/quiz.js' | relative_url }}" data-baseurl="{{ site.baseurl }}" defer></script>

@@ -1,0 +1,308 @@
+# ============================================================
+#  Pytania do strony „Quiz wiedzy o kosmosie” (/quiz/)
+#
+#  W jednym teście losuje się 15 pytań z tej listy.
+#
+#  pytanie      – treść pytania
+#  odpowiedzi   – dokładnie 3 odpowiedzi.
+#                 PIERWSZA odpowiedź jest zawsze POPRAWNA –
+#                 na stronie kolejność odpowiedzi jest losowana.
+#  wyjasnienie  – krótka ciekawostka pokazywana po odpowiedzi
+#  link         – (opcjonalnie) strona, na której można o tym poczytać
+#
+#  Nowe pytanie dopisz na końcu, kopiując któryś z bloków poniżej.
+# ============================================================
+
+# ---------- Planety i Słońce (strona „Układ Słoneczny”) ----------
+
+- pytanie: "Która planeta jest największa w Układzie Słonecznym?"
+  odpowiedzi: ["Jowisz", "Saturn", "Neptun"]
+  wyjasnienie: "W Jowiszu zmieściłoby się ponad 1300 Ziem!"
+  link: /uklad-sloneczny/
+
+- pytanie: "Która planeta jest najbliżej Słońca?"
+  odpowiedzi: ["Merkury", "Wenus", "Mars"]
+  wyjasnienie: "Merkury krąży średnio 57,9 mln km od Słońca, a jeden obieg zajmuje mu tylko 88 dni."
+  link: /uklad-sloneczny/
+
+- pytanie: "Która planeta jest najgorętsza?"
+  odpowiedzi: ["Wenus", "Merkury", "Mars"]
+  wyjasnienie: "Na Wenus jest ok. 464 °C. Gęste chmury zatrzymują ciepło, dlatego jest tam goręcej niż na Merkurym, choć Merkury jest bliżej Słońca."
+  link: /uklad-sloneczny/
+
+- pytanie: "Na której planecie doba trwa dłużej niż rok?"
+  odpowiedzi: ["Na Merkurym", "Na Jowiszu", "Na Marsie"]
+  wyjasnienie: "Na Merkurym od jednego wschodu Słońca do następnego mijają aż dwa merkuriańskie lata."
+  link: /uklad-sloneczny/
+
+- pytanie: "Na której planecie Słońce wschodzi na zachodzie?"
+  odpowiedzi: ["Na Wenus", "Na Marsie", "Na Saturnie"]
+  wyjasnienie: "Wenus kręci się wokół osi „do tyłu”, czyli w przeciwną stronę niż Ziemia."
+  link: /uklad-sloneczny/
+
+- pytanie: "Dlaczego Mars jest czerwony?"
+  odpowiedzi: ["Pokrywa go rdzawy pył", "Płynie po nim gorąca lawa", "Ma czerwone chmury"]
+  wyjasnienie: "Powierzchnię Marsa pokrywa pył zawierający rdzę, dlatego Mars nazywany jest Czerwoną Planetą."
+  link: /uklad-sloneczny/
+
+- pytanie: "Gdzie znajduje się Olympus Mons – największy wulkan w Układzie Słonecznym?"
+  odpowiedzi: ["Na Marsie", "Na Ziemi", "Na Księżycu"]
+  wyjasnienie: "Olympus Mons jest prawie 3 razy wyższy od Mount Everestu."
+  link: /uklad-sloneczny/
+
+- pytanie: "Ile księżyców ma Mars?"
+  odpowiedzi: ["2", "0", "12"]
+  wyjasnienie: "Księżyce Marsa to Fobos i Deimos."
+  link: /uklad-sloneczny/
+
+- pytanie: "Czym jest Wielka Czerwona Plama na Jowiszu?"
+  odpowiedzi: ["Burzą większą od całej Ziemi", "Ogromnym kraterem", "Jeziorem lawy"]
+  wyjasnienie: "To gigantyczna burza, która trwa na Jowiszu od setek lat."
+  link: /uklad-sloneczny/
+
+- pytanie: "Która planeta kręci się wokół własnej osi najszybciej?"
+  odpowiedzi: ["Jowisz", "Ziemia", "Merkury"]
+  wyjasnienie: "Doba na Jowiszu trwa tylko 9 godzin i 56 minut, mimo że to największa planeta."
+  link: /uklad-sloneczny/
+
+- pytanie: "Z czego zbudowane są pierścienie Saturna?"
+  odpowiedzi: ["Z kawałków lodu i skał", "Z gorącego gazu", "Z kryształów złota"]
+  wyjasnienie: "Kawałki w pierścieniach mają różne rozmiary – od ziarenek pyłu po bryły wielkości domu."
+  link: /uklad-sloneczny/
+
+- pytanie: "Która planeta pływałaby w gigantycznej wannie z wodą?"
+  odpowiedzi: ["Saturn", "Mars", "Ziemia"]
+  wyjasnienie: "Saturn ma tak małą gęstość (jest „lżejszy” od wody), że unosiłby się na niej."
+  link: /uklad-sloneczny/
+
+- pytanie: "Która planeta ma najwięcej znanych księżyców?"
+  odpowiedzi: ["Saturn", "Jowisz", "Ziemia"]
+  wyjasnienie: "W 2025 roku Saturn miał 274 znane księżyce, a Jowisz 97."
+  link: /uklad-sloneczny/
+
+- pytanie: "Która planeta „leży na boku”?"
+  odpowiedzi: ["Uran", "Neptun", "Wenus"]
+  wyjasnienie: "Oś obrotu Urana jest przechylona prawie o 98°. Na jego biegunach przez 42 lata trwa dzień, a potem przez 42 lata noc."
+  link: /uklad-sloneczny/
+
+- pytanie: "Na której planecie wieją najszybsze wiatry w Układzie Słonecznym?"
+  odpowiedzi: ["Na Neptunie", "Na Ziemi", "Na Marsie"]
+  wyjasnienie: "Wiatry na Neptunie mają ponad 2000 km/h!"
+  link: /uklad-sloneczny/
+
+- pytanie: "Ile razy Neptun okrążył Słońce od swojego odkrycia w 1846 roku?"
+  odpowiedzi: ["Dopiero raz", "Około 10 razy", "Ponad 100 razy"]
+  wyjasnienie: "Rok na Neptunie trwa prawie 165 lat ziemskich. Pierwszy pełny obieg od odkrycia skończył się w 2011 roku."
+  link: /uklad-sloneczny/
+
+- pytanie: "Ile mniej więcej leci światło ze Słońca do Ziemi?"
+  odpowiedzi: ["Około 8 minut", "Około 8 sekund", "Około 8 godzin"]
+  wyjasnienie: "Dokładnie około 8 minut i 20 sekund. Widzimy więc Słońce takie, jakie było 8 minut temu."
+  link: /uklad-sloneczny/
+
+- pytanie: "Jaką część masy całego Układu Słonecznego stanowi Słońce?"
+  odpowiedzi: ["Prawie całą – 99,8%", "Mniej więcej połowę", "Jedną dziesiątą"]
+  wyjasnienie: "Wszystkie planety, księżyce i planetoidy razem to tylko 0,2% masy Układu Słonecznego."
+  link: /uklad-sloneczny/
+
+- pytanie: "Jaka temperatura panuje w środku Słońca?"
+  odpowiedzi: ["Około 15 milionów °C", "Około 5500 °C", "Około 1000 °C"]
+  wyjasnienie: "Około 5500 °C ma powierzchnia Słońca. W środku jest prawie 3000 razy goręcej."
+  link: /uklad-sloneczny/
+
+- pytanie: "Ile lat ma Słońce?"
+  odpowiedzi: ["Około 4,6 miliarda lat", "Około 4600 lat", "Około 46 milionów lat"]
+  wyjasnienie: "Słońce jest mniej więcej w połowie swojego życia."
+  link: /uklad-sloneczny/
+
+- pytanie: "Czym jest 1 jednostka astronomiczna (1 j.a.)?"
+  odpowiedzi: ["Średnią odległością Ziemi od Słońca", "Odległością Ziemi od Księżyca", "Średnicą Słońca"]
+  wyjasnienie: "1 j.a. to około 149,6 mln km. Astronomowie używają jej do mierzenia odległości w Układzie Słonecznym."
+  link: /uklad-sloneczny/
+
+- pytanie: "Ile trwa rok na Marsie?"
+  odpowiedzi: ["Około 687 dni", "Około 365 dni", "Około 88 dni"]
+  wyjasnienie: "Rok na Marsie jest prawie dwa razy dłuższy niż na Ziemi. Za to doba trwa tam prawie tyle samo: 24 h 40 min."
+  link: /uklad-sloneczny/
+
+- pytanie: "Ile czasu Księżyc potrzebuje, żeby okrążyć Ziemię?"
+  odpowiedzi: ["Około 27 dni", "Około 7 dni", "Około roku"]
+  wyjasnienie: "Księżyc okrąża Ziemię w 27,3 dnia i krąży średnio 384 400 km od nas."
+  link: /uklad-sloneczny/
+
+- pytanie: "Którą stroną Księżyc jest zwrócony do Ziemi?"
+  odpowiedzi: ["Zawsze tą samą", "Każdej nocy inną", "Latem jedną, a zimą drugą"]
+  wyjasnienie: "Dlatego drugiej strony Księżyca nie da się zobaczyć z Ziemi."
+  link: /uklad-sloneczny/
+
+# ---------- Planety karłowate ----------
+
+- pytanie: "W którym roku Pluton przestał być nazywany dziewiątą planetą?"
+  odpowiedzi: ["W 2006", "W 1930", "W 2015"]
+  wyjasnienie: "W 2006 roku Pluton został uznany za planetę karłowatą."
+  link: /2026/11/planety-karlowate/
+
+- pytanie: "Jak nazywa się największy księżyc Plutona?"
+  odpowiedzi: ["Charon", "Tytan", "Fobos"]
+  wyjasnienie: "Pluton ma pięć znanych księżyców, a Charon jest z nich największy."
+  link: /2026/11/planety-karlowate/
+
+- pytanie: "Gdzie krąży planeta karłowata Ceres?"
+  odpowiedzi: ["W pasie planetoid między Marsem a Jowiszem", "W Pasie Kuipera za Neptunem", "Wokół Ziemi"]
+  wyjasnienie: "Ceres to jedyna oficjalna planeta karłowata w wewnętrznej części Układu Słonecznego."
+  link: /2026/11/planety-karlowate/
+
+- pytanie: "Która planeta karłowata ma kształt przypominający jajko?"
+  odpowiedzi: ["Haumea", "Eris", "Ceres"]
+  wyjasnienie: "Haumea obraca się wokół osi bardzo szybko, dlatego jest wydłużona."
+  link: /2026/11/planety-karlowate/
+
+- pytanie: "Ile jest oficjalnie uznanych planet karłowatych?"
+  odpowiedzi: ["5", "3", "9"]
+  wyjasnienie: "To Ceres, Pluton, Haumea, Makemake i Eris."
+  link: /2026/11/planety-karlowate/
+
+- pytanie: "Ile trwa jeden obieg Sedny wokół Słońca?"
+  odpowiedzi: ["Około 11 tysięcy lat", "Około 248 lat", "Około 12 lat"]
+  wyjasnienie: "Sedna krąży bardzo daleko od Słońca po niezwykle wydłużonej orbicie."
+  link: /2026/11/planety-karlowate/
+
+- pytanie: "Jak nazywa się sonda, która w 2015 roku sfotografowała Plutona z bliska?"
+  odpowiedzi: ["New Horizons", "Hubble", "Starship"]
+  wyjasnienie: "New Horizons przeleciała obok Plutona i zrobiła pierwsze dokładne zdjęcia jego powierzchni."
+  link: /2026/11/planety-karlowate/
+
+# ---------- Fazy Księżyca ----------
+
+- pytanie: "Ile trwa cały cykl faz Księżyca?"
+  odpowiedzi: ["Około 29,5 dnia", "Około 7 dni", "Około 365 dni"]
+  wyjasnienie: "Po tym czasie Księżyc znowu jest w tej samej fazie, na przykład w pełni."
+  link: /2026/11/fazy-ksiezyca/
+
+- pytanie: "Jak nazywa się faza, w której Księżyc jest prawie niewidoczny?"
+  odpowiedzi: ["Nów", "Pełnia", "Pierwsza kwadra"]
+  wyjasnienie: "Podczas nowiu oświetlona strona Księżyca jest skierowana od Ziemi, a sam Księżyc jest na niebie blisko Słońca."
+  link: /2026/11/fazy-ksiezyca/
+
+- pytanie: "Dlaczego Księżyc świeci na niebie?"
+  odpowiedzi: ["Odbija światło Słońca", "Świeci własnym światłem", "Świecą na nim wulkany"]
+  wyjasnienie: "Księżyc nie ma własnego światła. Widzimy tylko tę część, którą oświetla Słońce."
+  link: /2026/11/fazy-ksiezyca/
+
+- pytanie: "Jak nazywa się faza Księżyca, która przychodzi zaraz po pełni?"
+  odpowiedzi: ["Garbaty ubywający", "Sierp przybywający", "Pierwsza kwadra"]
+  wyjasnienie: "Po pełni jasna część tarczy zaczyna się zmniejszać – mówimy, że Księżyc „ubywa”."
+  link: /2026/11/fazy-ksiezyca/
+
+# ---------- Czarna dziura Sagittarius A* ----------
+
+- pytanie: "Jak nazywa się czarna dziura w centrum Drogi Mlecznej?"
+  odpowiedzi: ["Sagittarius A*", "Andromeda", "Betelgeza"]
+  wyjasnienie: "Czytamy ją: Sagittarius A-gwiazdka. Jest około 4 miliony razy masywniejsza od Słońca."
+  link: /2026/11/sagittarius-a-czarna-dziura/
+
+- pytanie: "Czym jest horyzont zdarzeń czarnej dziury?"
+  odpowiedzi: ["Granicą, zza której nawet światło nie może uciec", "Linią, gdzie niebo styka się z ziemią", "Pierścieniem planet wokół gwiazdy"]
+  wyjasnienie: "Za horyzontem zdarzeń grawitacja jest tak silna, że nic nie może się wydostać."
+  link: /2026/11/sagittarius-a-czarna-dziura/
+
+- pytanie: "Jak daleko od Ziemi jest czarna dziura Sagittarius A*?"
+  odpowiedzi: ["Około 26 tysięcy lat świetlnych", "Około 8 minut świetlnych", "Tuż za Neptunem"]
+  wyjasnienie: "Jest tak daleko, że nie stanowi dla nas żadnego zagrożenia."
+  link: /2026/11/sagittarius-a-czarna-dziura/
+
+# ---------- Ciemna materia i rozszerzający się Wszechświat ----------
+
+- pytanie: "Skąd naukowcy wiedzą, że ciemna materia prawdopodobnie istnieje?"
+  odpowiedzi: ["Widzą, jak jej grawitacja wpływa na gwiazdy i galaktyki", "Widać ją przez zwykły teleskop", "Świeci na zielono w nocy"]
+  wyjasnienie: "Ciemna materia nie świeci i nie odbija światła, ale jej grawitacja zmienia ruch gwiazd i zakrzywia światło."
+  link: /2026/11/czarna-materia/
+
+- pytanie: "Jaką część Wszechświata stanowi zwykła materia, z której zbudowane są gwiazdy, planety i ludzie?"
+  odpowiedzi: ["Tylko około 5%", "Około 50%", "Prawie 100%"]
+  wyjasnienie: "Ciemna materia to około 27% Wszechświata – ponad 5 razy więcej niż zwykła materia."
+  link: /2026/11/czarna-materia/
+
+- pytanie: "Ile lat temu, według naukowców, nastąpił Wielki Wybuch?"
+  odpowiedzi: ["Około 13,8 miliarda lat temu", "Około 4,6 miliarda lat temu", "Około 1 miliona lat temu"]
+  wyjasnienie: "Od tamtej pory Wszechświat cały czas się rozszerza. 4,6 miliarda lat to wiek Słońca."
+  link: /2026/11/czy-wszechswiat-sie-powieksza/
+
+- pytanie: "Który astronom miał duży wkład w odkrycie, że Wszechświat się rozszerza?"
+  odpowiedzi: ["Edwin Hubble", "Mikołaj Kopernik", "Isaac Newton"]
+  wyjasnienie: "Hubble zauważył, że galaktyki oddalają się od siebie. Jego imię nosi słynny teleskop kosmiczny."
+  link: /2026/11/czy-wszechswiat-sie-powieksza/
+
+- pytanie: "Co według naukowców może sprawiać, że Wszechświat rozszerza się coraz szybciej?"
+  odpowiedzi: ["Ciemna energia", "Wiatr słoneczny", "Czarna dziura Sagittarius A*"]
+  wyjasnienie: "Natura ciemnej energii nadal jest dla naukowców zagadką."
+  link: /2026/11/czy-wszechswiat-sie-powieksza/
+
+# ---------- Teleskopy i rakiety ----------
+
+- pytanie: "Dlaczego Kosmiczny Teleskop Hubble'a powoli spada na Ziemię?"
+  odpowiedzi: ["Spowalnia go resztka atmosfery, a nie ma własnego napędu", "Przyciąga go Księżyc", "Uderzają w niego meteoryty"]
+  wyjasnienie: "Według NASA Hubble może wejść w atmosferę około 2033 roku."
+  link: /2026/11/hubble-spada-na-ziemie/
+
+- pytanie: "Z jakich dwóch części składa się rakieta Starship?"
+  odpowiedzi: ["Super Heavy i Ship", "Falcon i Dragon", "Saturn i Apollo"]
+  wyjasnienie: "Super Heavy to dolny stopień (booster), a Ship to górny stopień, czyli statek kosmiczny."
+  link: /2026/11/starship-ship-catch/
+
+- pytanie: "Czym wieża startowa łapie wracający Starship?"
+  odpowiedzi: ["Mechanicznymi ramionami, zwanymi „pałeczkami”", "Wielką siatką", "Magnesem"]
+  wyjasnienie: "W listopadzie 2026 roku wieża po raz pierwszy złapała górny stopień – Ship – po powrocie z kosmosu."
+  link: /2026/11/starship-ship-catch/
+
+- pytanie: "Od czego najbardziej zależy, ile światła zbierze teleskop?"
+  odpowiedzi: ["Od średnicy obiektywu lub lustra", "Od koloru tuby", "Od długości statywu"]
+  wyjasnienie: "Im większa średnica, tym więcej światła i tym słabsze obiekty zobaczysz."
+  link: /2026/11/startravel-mak-dobson/
+
+# ---------- Gwiazdy i gwiazdozbiory ----------
+
+- pytanie: "Jak nazywa się najjaśniejsza gwiazda nocnego nieba?"
+  odpowiedzi: ["Syriusz", "Gwiazda Polarna", "Betelgeza"]
+  wyjasnienie: "Syriusz znajduje się w gwiazdozbiorze Wielkiego Psa i świetnie go widać zimą."
+  link: /2026/11/zimowe-gwiazdozbiory/
+
+- pytanie: "Trzy jasne gwiazdy Oriona ułożone w jednej linii to…"
+  odpowiedzi: ["Pas Oriona", "Wielki Wóz", "Krzyż Południa"]
+  wyjasnienie: "Pas Oriona tworzą gwiazdy Alnitak, Alnilam i Mintaka."
+  link: /2026/11/orion/
+
+- pytanie: "Która gwiazda w Orionie świeci pomarańczowoczerwonym światłem?"
+  odpowiedzi: ["Betelgeza", "Rigel", "Syriusz"]
+  wyjasnienie: "Betelgeza jest w górnej części Oriona, a niebieskawy Rigel – w dolnej."
+  link: /2026/11/orion/
+
+- pytanie: "Czym jest obiekt M42, który można zobaczyć w Orionie?"
+  odpowiedzi: ["Mgławicą", "Planetą", "Czarną dziurą"]
+  wyjasnienie: "M42 to Wielka Mgławica Oriona. Przez teleskop wygląda jak jasna, mglista plamka."
+  link: /2026/11/orion/
+
+- pytanie: "W jakim gwiazdozbiorze znajdują się Plejady?"
+  odpowiedzi: ["W Byku", "W Orionie", "W Lwie"]
+  wyjasnienie: "W Byku jest też czerwonawa gwiazda Aldebaran."
+  link: /2026/11/plejady-w-gwiazdozbiorze-byka/
+
+- pytanie: "Jak inaczej nazywa się gromadę gwiazd Plejady?"
+  odpowiedzi: ["Siedem Sióstr", "Pas Oriona", "Wielki Wóz"]
+  wyjasnienie: "Najbardziej znanych jest siedem najjaśniejszych gwiazd, ale w gromadzie jest ich dużo więcej."
+  link: /2026/11/plejady-w-gwiazdozbiorze-byka/
+
+- pytanie: "Jaki kolor mają gwiazdy Plejad?"
+  odpowiedzi: ["Niebieskawy", "Czerwony", "Zielony"]
+  wyjasnienie: "To młode, gorące gwiazdy. Otacza je niebieska mgławica z pyłu, który odbija ich światło."
+  link: /2026/11/plejady-w-gwiazdozbiorze-byka/
+
+- pytanie: "W którym gwiazdozbiorze świecą gwiazdy Kastor i Polluks?"
+  odpowiedzi: ["W Bliźniętach", "W Woźnicy", "W Małym Psie"]
+  wyjasnienie: "Dwie jasne gwiazdy obok siebie to znak rozpoznawczy Bliźniąt."
+  link: /2026/11/zimowe-gwiazdozbiory/
+
+- pytanie: "Który z tych księżyców NIE krąży wokół Jowisza?"
+  odpowiedzi: ["Tytan", "Europa", "Ganimedes"]
+  wyjasnienie: "Tytan to największy księżyc Saturna. Cztery największe księżyce Jowisza to Io, Europa, Ganimedes i Kallisto."
+  link: /2026/11/jowisz-na-niebie/
